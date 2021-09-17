@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Foraita R et al." />
+<meta name="author" content="Foraita R, Witte J, Börnhorst C, De Henauw S, Gwozdz W, Krogh V, Lauren L, Lauria F, Molnár D, Moreno L, Page A, Reisch A, Veidebaum T, Tornaritis M, Pigeot I, Didelez V" />
 
 
 <title>A longitudinal causal graph analysis investigating modifiable risk factors and obesity in a European cohort of children and adolescents</title>
@@ -169,19 +169,16 @@ pre code {
 
 
 <h1 class="title toc-ignore">A longitudinal causal graph analysis investigating modifiable risk factors and obesity in a European cohort of children and adolescents</h1>
-<h4 class="author">Foraita R et al.</h4>
-<h4 class="date">7 9 2021</h4>
+<h4 class="author">Foraita R, Witte J, Börnhorst C, De Henauw S, Gwozdz W, Krogh V, Lauren L, Lauria F, Molnár D, Moreno L, Page A, Reisch A, Veidebaum T, Tornaritis M, Pigeot I, Didelez V</h4>
+<h4 class="date">17 9 2021</h4>
 
 </div>
 
 
 <div id="cohort-causal-graph" class="section level2">
 <h2>Cohort Causal Graph</h2>
-<p>The following cohort causal graphs (CCGs) are based on 2 - 16 year old European children and adolescents from the IDEFICS/I.family cohort. The data set contains N = 5,112 children born between 1997 and 2006. All CGGs of childhood obesity were estimated by the <strong>temporal pc-algorithm</strong> (tpc) for multiple imputed data sets. The tpc algorithm is a constraint-based structure learning algorithm.</p>
-<p>Constraint-based algorithms search for conditional independencies in the data by applying conditional independence tests in order to estimate the structure of an directed acyclic graph (DAG). However, several DAGs can imply the same set of conditional independencies, that means more than one DAG is usually compatible with the data. The set of all DAGs describing a set of estimated conditional independencies is called a (Markov) equivalence class which can uniquely be represented by a <em>completed partially directed acyclic graph</em> (CPDAG). A CPDAG includes directed and undirected edges where an undirected edge means that both orientations occur within the equivalence class. Additional knowledge about the causal relationship can help the algorithm to orientate edges. This is the case, for example, with repeated measurements, where it is known that an observation at a later point in time cannot influence the observation at an earlier point in time. Cohort data implicitly provide a temporal order between the variables that were collected at different surveys.</p>
-<div id="analysis-results" class="section level3">
-<h3>Analysis results</h3>
-<p>We used this prior knowledge for the analysis by distributing the variables into different tiers. The data set consisted of 51 variables that were distributed over five tiers, which follow a temporal order:</p>
+<p>The following cohort causal graphs (CCGs) are based on 2 - 16 year old European children and adolescents from the IDEFICS/I.family cohort. The data set contains N = 5,112 children born between 1997 and 2006 who participated in all three waves of the study.</p>
+<p>We used the temporal order of the variables as prior knowledge for the analysis by distributing the variables into different tiers. The analysis data set consisted of 51 variables that were distributed over five tiers:</p>
 <ol style="list-style-type: decimal">
 <li>Context variables (social and cultural background)</li>
 <li>Early life factors</li>
@@ -189,14 +186,14 @@ pre code {
 <li>First follow-up (FU1, two years after baseline)</li>
 <li>Second follow-up (FU2, six years after baseline)</li>
 </ol>
-<p>We assume that variables from a tier with a lower number can effect variables in tiers with a higher number but not vice versa. In addition, we forbid edges between some variable pairs such as edges pointing to age or individual child variables (e.g. physical activity) pointing to ISCED or parental income.</p>
-<p>Nodes are coloured with respect to their appearance in the life course. Edges without arrowheads could not be orientated by the algorithm.</p>
-<div id="zkresbijeg" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<p>We assume that variables from a tier with a lower number can affect variables in tiers with a higher number, but not vice versa. In addition, we forbid edges between some variable pairs such as edges pointing to age or individual child variables (e.g. physical activity) pointing to ISCED or parental income.</p>
+<p>All CGGs of childhood obesity were estimated by the <strong>temporal PC-algorithm</strong> (tPC) for multiple imputed data sets using the R-packages <a href="https://github.com/bips-hb/tpc">tpc</a> and <a href="https://github.com/bips-hb/micd">micd</a>. The <em>tPC</em> package allows to make use of prior knowledge regarding the temporal order of the cohort data and the <em>micd</em> package offers the possibility to run the pc algorithm on multiple imputed data sets and with mixed variable scales. PC and tPC algorithm are both constraint-based structure learning algorithms. Both, <strong>tPC</strong> and <strong>micd</strong> rely on the PC algorithm as implemented in <a href="https://cran.r-project.org/web/packages/pcalg/index.html">pcalg</a>.</p>
+<div id="zythztaxud" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#zkresbijeg .gt_table {
+#zythztaxud .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -221,7 +218,7 @@ pre code {
   border-left-color: #D3D3D3;
 }
 
-#zkresbijeg .gt_heading {
+#zythztaxud .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -233,7 +230,7 @@ pre code {
   border-right-color: #D3D3D3;
 }
 
-#zkresbijeg .gt_title {
+#zythztaxud .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -243,7 +240,7 @@ pre code {
   border-bottom-width: 0;
 }
 
-#zkresbijeg .gt_subtitle {
+#zythztaxud .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -253,13 +250,13 @@ pre code {
   border-top-width: 0;
 }
 
-#zkresbijeg .gt_bottom_border {
+#zythztaxud .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#zkresbijeg .gt_col_headings {
+#zythztaxud .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -274,7 +271,7 @@ pre code {
   border-right-color: #D3D3D3;
 }
 
-#zkresbijeg .gt_col_heading {
+#zythztaxud .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -294,7 +291,7 @@ pre code {
   overflow-x: hidden;
 }
 
-#zkresbijeg .gt_column_spanner_outer {
+#zythztaxud .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -306,15 +303,15 @@ pre code {
   padding-right: 4px;
 }
 
-#zkresbijeg .gt_column_spanner_outer:first-child {
+#zythztaxud .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#zkresbijeg .gt_column_spanner_outer:last-child {
+#zythztaxud .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#zkresbijeg .gt_column_spanner {
+#zythztaxud .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -326,7 +323,7 @@ pre code {
   width: 100%;
 }
 
-#zkresbijeg .gt_group_heading {
+#zythztaxud .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -348,7 +345,7 @@ pre code {
   vertical-align: middle;
 }
 
-#zkresbijeg .gt_empty_group_heading {
+#zythztaxud .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -363,15 +360,15 @@ pre code {
   vertical-align: middle;
 }
 
-#zkresbijeg .gt_from_md > :first-child {
+#zythztaxud .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#zkresbijeg .gt_from_md > :last-child {
+#zythztaxud .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#zkresbijeg .gt_row {
+#zythztaxud .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -390,7 +387,7 @@ pre code {
   overflow-x: hidden;
 }
 
-#zkresbijeg .gt_stub {
+#zythztaxud .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -402,7 +399,7 @@ pre code {
   padding-left: 12px;
 }
 
-#zkresbijeg .gt_summary_row {
+#zythztaxud .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -412,7 +409,7 @@ pre code {
   padding-right: 5px;
 }
 
-#zkresbijeg .gt_first_summary_row {
+#zythztaxud .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -422,7 +419,7 @@ pre code {
   border-top-color: #D3D3D3;
 }
 
-#zkresbijeg .gt_grand_summary_row {
+#zythztaxud .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -432,7 +429,7 @@ pre code {
   padding-right: 5px;
 }
 
-#zkresbijeg .gt_first_grand_summary_row {
+#zythztaxud .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -442,11 +439,11 @@ pre code {
   border-top-color: #D3D3D3;
 }
 
-#zkresbijeg .gt_striped {
+#zythztaxud .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#zkresbijeg .gt_table_body {
+#zythztaxud .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -455,7 +452,7 @@ pre code {
   border-bottom-color: #D3D3D3;
 }
 
-#zkresbijeg .gt_footnotes {
+#zythztaxud .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -469,13 +466,13 @@ pre code {
   border-right-color: #D3D3D3;
 }
 
-#zkresbijeg .gt_footnote {
+#zythztaxud .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#zkresbijeg .gt_sourcenotes {
+#zythztaxud .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -489,41 +486,41 @@ pre code {
   border-right-color: #D3D3D3;
 }
 
-#zkresbijeg .gt_sourcenote {
+#zythztaxud .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#zkresbijeg .gt_left {
+#zythztaxud .gt_left {
   text-align: left;
 }
 
-#zkresbijeg .gt_center {
+#zythztaxud .gt_center {
   text-align: center;
 }
 
-#zkresbijeg .gt_right {
+#zythztaxud .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#zkresbijeg .gt_font_normal {
+#zythztaxud .gt_font_normal {
   font-weight: normal;
 }
 
-#zkresbijeg .gt_font_bold {
+#zythztaxud .gt_font_bold {
   font-weight: bold;
 }
 
-#zkresbijeg .gt_font_italic {
+#zythztaxud .gt_font_italic {
   font-style: italic;
 }
 
-#zkresbijeg .gt_super {
+#zythztaxud .gt_super {
   font-size: 65%;
 }
 
-#zkresbijeg .gt_footnote_marks {
+#zythztaxud .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -636,7 +633,14 @@ family meals</td>
 <div style="margin-bottom:50px;">
 
 </div>
-<p>We used the R-packages <a href="https://github.com/bips-hb/tpc">tpc</a> and <a href="https://github.com/bips-hb/micd">micd</a> for this analysis. Both packages rely on the pc algorithm as implemented in <a href="https://cran.r-project.org/web/packages/pcalg/index.html">pcalg</a>. The <em>tpc</em> package allows to make use of prior knowledge regarding the temporal order of the cohort data and the <em>micd</em> package offers the possibility to run the pc algorithm on multiple imputed data sets and with mixed variable scales.</p>
+<!--
+Constraint-based algorithms search for conditional independencies in the data by applying conditional independence tests
+in order to estimate the structure of an directed acyclic graph (DAG). However, several DAGs can imply the same set of conditional independencies, that means more than one DAG is usually compatible with the data. 
+The set of all DAGs describing a set of estimated conditional independencies is 
+called a (Markov) equivalence class which can uniquely be represented by a *completed partially directed acyclic graph* (CPDAG). A CPDAG includes directed and undirected edges where an undirected edge means that both orientations occur within the equivalence class. 
+Additional knowledge about the causal relationship can help the algorithm to orientate edges. This is the case, for example, with repeated measurements, where it is known that an observation at a later point in time cannot influence the observation at an earlier point in time. 
+Cohort data implicitly provide a temporal order between the variables that were collected at different surveys. 
+-->
 <div style="margin-bottom:50px;">
 
 </div>
@@ -660,21 +664,22 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
 
 </div>
 <div class="figure">
-<div id="htmlwidget-2af10472a1a809c446e6" style="width:100%;height:800px;" class="visNetwork html-widget"></div>
-<script type="application/json" data-for="htmlwidget-2af10472a1a809c446e6">{"x":{"nodes":{"id":["sex","country3","migrant","bage","bf","bweight","preg_week","formula","hdiet","preg_smoke","age.0","school.0","media.0","bmi.0","bmi_m.0","familymeal.0","income.0","isced.0","pa.0","sleep.0","wb.0","yhei.0","homa.0","age.1","school.1","media.1","bmi.1","bmi_m.1","familymeal.1","income.1","isced.1","pa.1","sleep.1","wb.1","yhei.1","homa.1","age.2","media.2","bmi.2","bmi_m.2","alc.2","familymeal.2","income.2","isced.2","pa.2","pub.2","sleep.2","smoke.2","wb.2","yhei.2","homa.2"],"label":["Sex","Region","Migrant","Mother's age\nat birth","Total\nbreastfeeding","Birthweight","Weeks of\npregnancy","Formula milk","HH diet","Smoking\nduring pregnancy","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","AVM","BMI","Mother's BMI","Alcohol","Daily\nfamily meals","Income","ISCED","PA","Puberty","Sleep","Smoking","Well-being","YHEI","HOMA"],"group":["background","background","background","early life","early life","early life","early life","early life","early life","early life","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2"],"level":[1,1,1,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],"color.background":["#afa8b3","#afa8b3","#afa8b3","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F"],"color.border":["#afa8b3","#afa8b3","#afa8b3","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F"],"color.highlight.border":["#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B"],"x":[-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429],"y":[-1,-1,-1,-1,-1,-1,-1,-1,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,0,0,0,0,0,0,0,0,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,1,1,1]},"edges":{"from":["sex","sex","sex","sex","sex","sex","country3","country3","country3","country3","country3","country3","country3","country3","migrant","migrant","migrant","income.0","income.0","income.0","isced.0","isced.0","isced.0","bage","bage","bage","bage","bweight","bweight","preg_week","preg_week","formula","formula","hdiet","age.0","age.0","age.0","age.0","age.0","school.0","school.0","school.0","school.0","media.0","media.0","media.0","bmi.0","bmi_m.0","bmi_m.0","familymeal.0","pa.0","pa.0","pa.0","pa.0","sleep.0","sleep.0","sleep.0","sleep.0","wb.0","wb.0","wb.0","yhei.0","yhei.0","yhei.0","yhei.0","homa.0","age.1","age.1","school.1","media.1","media.1","media.1","media.1","media.1","bmi.1","familymeal.1","income.1","income.1","isced.1","pa.1","pa.1","pa.1","sleep.1","wb.1","wb.1","wb.1","yhei.1","homa.1","homa.1","age.2","age.2","age.2","age.2","age.2","age.2","age.2","media.2","media.2","bmi.2","bmi.2","bmi_m.2","alc.2","sleep.2","wb.2"],"to":["bweight","media.0","wb.0","media.1","media.2","pa.2","income.0","isced.0","bf","bweight","formula","hdiet","media.0","bmi.0","income.0","hdiet","wb.0","isced.0","pa.0","income.1","bf","bmi.0","isced.1","hdiet","bmi_m.0","wb.0","yhei.2","bmi.0","bmi_m.0","bweight","formula","bf","sleep.0","bf","school.0","media.0","bmi.0","pa.0","sleep.2","sleep.0","wb.0","media.2","sleep.2","yhei.0","media.1","media.2","homa.0","bmi.0","bmi.2","familymeal.1","wb.0","yhei.0","pa.1","pa.2","sleep.1","wb.1","homa.1","sleep.2","yhei.0","wb.1","wb.2","familymeal.0","media.1","yhei.1","yhei.2","homa.1","school.1","sleep.1","familymeal.1","sleep.1","wb.1","yhei.1","homa.1","media.2","homa.1","yhei.1","isced.1","income.2","isced.2","wb.1","yhei.1","pa.2","sleep.2","sleep.1","yhei.1","wb.2","yhei.2","pub.2","homa.2","media.2","alc.2","pub.2","sleep.2","smoke.2","wb.2","yhei.2","sleep.2","yhei.2","pub.2","homa.2","bmi.2","smoke.2","wb.2","yhei.2"],"edges.from":["sex","sex","sex","sex","sex","sex","country3","country3","country3","country3","country3","country3","country3","country3","migrant","migrant","migrant","income.0","income.0","income.0","isced.0","isced.0","isced.0","bage","bage","bage","bage","bweight","bweight","preg_week","preg_week","formula","formula","hdiet","age.0","age.0","age.0","age.0","age.0","school.0","school.0","school.0","school.0","media.0","media.0","media.0","bmi.0","bmi_m.0","bmi_m.0","familymeal.0","pa.0","pa.0","pa.0","pa.0","sleep.0","sleep.0","sleep.0","sleep.0","wb.0","wb.0","wb.0","yhei.0","yhei.0","yhei.0","yhei.0","homa.0","age.1","age.1","school.1","media.1","media.1","media.1","media.1","media.1","bmi.1","familymeal.1","income.1","income.1","isced.1","pa.1","pa.1","pa.1","sleep.1","wb.1","wb.1","wb.1","yhei.1","homa.1","homa.1","age.2","age.2","age.2","age.2","age.2","age.2","age.2","media.2","media.2","bmi.2","bmi.2","bmi_m.2","alc.2","sleep.2","wb.2"],"arrowheads":["arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow"],"arrows.to.enabled":[true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,true,false,true,false,false,false,true,true,false,false,true,true,true,false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,true,false,true,false]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"physics":false,"shape":"dot","label":["Sex","Region","Migrant","Mother's age\nat birth","Total\nbreastfeeding","Birthweight","Weeks of\npregnancy","Formula milk","HH diet","Smoking\nduring pregnancy","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","AVM","BMI","Mother's BMI","Alcohol","Daily\nfamily meals","Income","ISCED","PA","Puberty","Sleep","Smoking","Well-being","YHEI","HOMA"],"group":["background","background","background","early life","early life","early life","early life","early life","early life","early life","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2"],"font":{"size":32}},"manipulation":{"enabled":false},"edges":{"smooth":false,"width":2,"selectionWidth":3,"arrows":"to","color":{"color":"#466286","highlight":"#C62F4B"},"shadow":false},"physics":{"stabilization":false}},"groups":["background","early life","baseline","FU1","FU2"],"width":"100%","height":"800px","idselection":{"enabled":false},"byselection":{"enabled":false},"main":{"text":"Main CCG based on multiple imputation","style":"font-family:Georgia, Times New Roman, Times, serif;font-weight:bold;font-size:20px;text-align:center;"},"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","igraphlayout":{"type":"square"},"legend":{"width":0.15,"useGroups":false,"position":"left","ncol":1,"stepX":100,"stepY":100,"zoom":true,"nodes":{"label":["Context","Early life","Baseline","FU1","FU2"],"shape":["square","square","dot","dot","dot"],"color.background":["#afa8b3","#4F3824","#D1603D","#DDB967","#D0E37F"],"color.border":["#afa8b3","#4F3824","#D1603D","#DDB967","#D0E37F"]},"nodesToDataframe":true}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-ae320471829e1dbb44b9" style="width:100%;height:800px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ae320471829e1dbb44b9">{"x":{"nodes":{"id":["sex","country3","migrant","bage","bf","bweight","preg_week","formula","hdiet","preg_smoke","age.0","school.0","media.0","bmi.0","bmi_m.0","familymeal.0","income.0","isced.0","pa.0","sleep.0","wb.0","yhei.0","homa.0","age.1","school.1","media.1","bmi.1","bmi_m.1","familymeal.1","income.1","isced.1","pa.1","sleep.1","wb.1","yhei.1","homa.1","age.2","media.2","bmi.2","bmi_m.2","alc.2","familymeal.2","income.2","isced.2","pa.2","pub.2","sleep.2","smoke.2","wb.2","yhei.2","homa.2"],"label":["Sex","Region","Migrant","Mother's age\nat birth","Total\nbreastfeeding","Birthweight","Weeks of\npregnancy","Formula milk","HH diet","Smoking\nduring pregnancy","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","AVM","BMI","Mother's BMI","Alcohol","Daily\nfamily meals","Income","ISCED","PA","Puberty","Sleep","Smoking","Well-being","YHEI","HOMA"],"group":["background","background","background","early life","early life","early life","early life","early life","early life","early life","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2"],"level":[1,1,1,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],"color.background":["#afa8b3","#afa8b3","#afa8b3","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F"],"color.border":["#afa8b3","#afa8b3","#afa8b3","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F"],"color.highlight.border":["#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B"],"x":[-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429],"y":[-1,-1,-1,-1,-1,-1,-1,-1,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,0,0,0,0,0,0,0,0,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,1,1,1]},"edges":{"from":["sex","sex","sex","sex","sex","sex","country3","country3","country3","country3","country3","country3","country3","country3","migrant","migrant","migrant","income.0","income.0","income.0","isced.0","isced.0","isced.0","bage","bage","bage","bage","bweight","bweight","preg_week","preg_week","formula","formula","hdiet","age.0","age.0","age.0","age.0","age.0","school.0","school.0","school.0","school.0","media.0","media.0","media.0","bmi.0","bmi_m.0","bmi_m.0","familymeal.0","pa.0","pa.0","pa.0","pa.0","sleep.0","sleep.0","sleep.0","sleep.0","wb.0","wb.0","wb.0","yhei.0","yhei.0","yhei.0","yhei.0","homa.0","age.1","age.1","school.1","media.1","media.1","media.1","media.1","media.1","bmi.1","familymeal.1","income.1","income.1","isced.1","pa.1","pa.1","pa.1","sleep.1","wb.1","wb.1","wb.1","yhei.1","homa.1","homa.1","age.2","age.2","age.2","age.2","age.2","age.2","age.2","media.2","media.2","bmi.2","bmi.2","bmi_m.2","alc.2","sleep.2","wb.2"],"to":["bweight","media.0","wb.0","media.1","media.2","pa.2","income.0","isced.0","bf","bweight","formula","hdiet","media.0","bmi.0","income.0","hdiet","wb.0","isced.0","pa.0","income.1","bf","bmi.0","isced.1","hdiet","bmi_m.0","wb.0","yhei.2","bmi.0","bmi_m.0","bweight","formula","bf","sleep.0","bf","school.0","media.0","bmi.0","pa.0","sleep.2","sleep.0","wb.0","media.2","sleep.2","yhei.0","media.1","media.2","homa.0","bmi.0","bmi.2","familymeal.1","wb.0","yhei.0","pa.1","pa.2","sleep.1","wb.1","homa.1","sleep.2","yhei.0","wb.1","wb.2","familymeal.0","media.1","yhei.1","yhei.2","homa.1","school.1","sleep.1","familymeal.1","sleep.1","wb.1","yhei.1","homa.1","media.2","homa.1","yhei.1","isced.1","income.2","isced.2","wb.1","yhei.1","pa.2","sleep.2","sleep.1","yhei.1","wb.2","yhei.2","pub.2","homa.2","media.2","alc.2","pub.2","sleep.2","smoke.2","wb.2","yhei.2","sleep.2","yhei.2","pub.2","homa.2","bmi.2","smoke.2","wb.2","yhei.2"],"edges.from":["sex","sex","sex","sex","sex","sex","country3","country3","country3","country3","country3","country3","country3","country3","migrant","migrant","migrant","income.0","income.0","income.0","isced.0","isced.0","isced.0","bage","bage","bage","bage","bweight","bweight","preg_week","preg_week","formula","formula","hdiet","age.0","age.0","age.0","age.0","age.0","school.0","school.0","school.0","school.0","media.0","media.0","media.0","bmi.0","bmi_m.0","bmi_m.0","familymeal.0","pa.0","pa.0","pa.0","pa.0","sleep.0","sleep.0","sleep.0","sleep.0","wb.0","wb.0","wb.0","yhei.0","yhei.0","yhei.0","yhei.0","homa.0","age.1","age.1","school.1","media.1","media.1","media.1","media.1","media.1","bmi.1","familymeal.1","income.1","income.1","isced.1","pa.1","pa.1","pa.1","sleep.1","wb.1","wb.1","wb.1","yhei.1","homa.1","homa.1","age.2","age.2","age.2","age.2","age.2","age.2","age.2","media.2","media.2","bmi.2","bmi.2","bmi_m.2","alc.2","sleep.2","wb.2"],"arrowheads":["arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow"],"arrows.to.enabled":[true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,true,false,true,false,false,false,true,true,false,false,true,true,true,false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,true,false,true,false]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"physics":false,"shape":"dot","label":["Sex","Region","Migrant","Mother's age\nat birth","Total\nbreastfeeding","Birthweight","Weeks of\npregnancy","Formula milk","HH diet","Smoking\nduring pregnancy","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","AVM","BMI","Mother's BMI","Alcohol","Daily\nfamily meals","Income","ISCED","PA","Puberty","Sleep","Smoking","Well-being","YHEI","HOMA"],"group":["background","background","background","early life","early life","early life","early life","early life","early life","early life","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2"],"font":{"size":32}},"manipulation":{"enabled":false},"edges":{"smooth":false,"width":2,"selectionWidth":3,"arrows":"to","color":{"color":"#466286","highlight":"#C62F4B"},"shadow":false},"physics":{"stabilization":false}},"groups":["background","early life","baseline","FU1","FU2"],"width":"100%","height":"800px","idselection":{"enabled":false},"byselection":{"enabled":false},"main":{"text":"Main CCG based on multiple imputation","style":"font-family:Georgia, Times New Roman, Times, serif;font-weight:bold;font-size:20px;text-align:center;"},"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","igraphlayout":{"type":"square"},"legend":{"width":0.15,"useGroups":false,"position":"left","ncol":1,"stepX":100,"stepY":100,"zoom":true,"nodes":{"label":["Context","Early life","Baseline","FU1","FU2"],"shape":["square","square","dot","dot","dot"],"color.background":["#afa8b3","#4F3824","#D1603D","#DDB967","#D0E37F"],"color.border":["#afa8b3","#4F3824","#D1603D","#DDB967","#D0E37F"]},"nodesToDataframe":true}},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
 <strong>Fig.1</strong> Missing values were ten times imputed with multiple imputation based on chained equation using the <a href="https://cran.r-project.org/web/packages/mice/">mice</a> R-package. Random forests served as imputation method. Click on nodes to shift them in the graph.
 </p>
 </div>
+<p><strong>Note:</strong> nodes are coloured with respect to their appearance in the life course. Edges without arrowheads could not be orientated by the algorithm.</p>
 <div style="margin-bottom:50px;">
 
 </div>
-<div id="gzjayrxnsh" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="blsfvtobay" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#gzjayrxnsh .gt_table {
+#blsfvtobay .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -699,7 +704,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   border-left-color: #D3D3D3;
 }
 
-#gzjayrxnsh .gt_heading {
+#blsfvtobay .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -711,7 +716,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   border-right-color: #D3D3D3;
 }
 
-#gzjayrxnsh .gt_title {
+#blsfvtobay .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -721,7 +726,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   border-bottom-width: 0;
 }
 
-#gzjayrxnsh .gt_subtitle {
+#blsfvtobay .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -731,13 +736,13 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   border-top-width: 0;
 }
 
-#gzjayrxnsh .gt_bottom_border {
+#blsfvtobay .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#gzjayrxnsh .gt_col_headings {
+#blsfvtobay .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -752,7 +757,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   border-right-color: #D3D3D3;
 }
 
-#gzjayrxnsh .gt_col_heading {
+#blsfvtobay .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -772,7 +777,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   overflow-x: hidden;
 }
 
-#gzjayrxnsh .gt_column_spanner_outer {
+#blsfvtobay .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -784,15 +789,15 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   padding-right: 4px;
 }
 
-#gzjayrxnsh .gt_column_spanner_outer:first-child {
+#blsfvtobay .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#gzjayrxnsh .gt_column_spanner_outer:last-child {
+#blsfvtobay .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#gzjayrxnsh .gt_column_spanner {
+#blsfvtobay .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -804,7 +809,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   width: 100%;
 }
 
-#gzjayrxnsh .gt_group_heading {
+#blsfvtobay .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -826,7 +831,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   vertical-align: middle;
 }
 
-#gzjayrxnsh .gt_empty_group_heading {
+#blsfvtobay .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -841,15 +846,15 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   vertical-align: middle;
 }
 
-#gzjayrxnsh .gt_from_md > :first-child {
+#blsfvtobay .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#gzjayrxnsh .gt_from_md > :last-child {
+#blsfvtobay .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#gzjayrxnsh .gt_row {
+#blsfvtobay .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -868,7 +873,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   overflow-x: hidden;
 }
 
-#gzjayrxnsh .gt_stub {
+#blsfvtobay .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -880,7 +885,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   padding-left: 12px;
 }
 
-#gzjayrxnsh .gt_summary_row {
+#blsfvtobay .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -890,7 +895,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   padding-right: 5px;
 }
 
-#gzjayrxnsh .gt_first_summary_row {
+#blsfvtobay .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -900,7 +905,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   border-top-color: #D3D3D3;
 }
 
-#gzjayrxnsh .gt_grand_summary_row {
+#blsfvtobay .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -910,7 +915,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   padding-right: 5px;
 }
 
-#gzjayrxnsh .gt_first_grand_summary_row {
+#blsfvtobay .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -920,11 +925,11 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   border-top-color: #D3D3D3;
 }
 
-#gzjayrxnsh .gt_striped {
+#blsfvtobay .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#gzjayrxnsh .gt_table_body {
+#blsfvtobay .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -933,7 +938,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   border-bottom-color: #D3D3D3;
 }
 
-#gzjayrxnsh .gt_footnotes {
+#blsfvtobay .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -947,13 +952,13 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   border-right-color: #D3D3D3;
 }
 
-#gzjayrxnsh .gt_footnote {
+#blsfvtobay .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#gzjayrxnsh .gt_sourcenotes {
+#blsfvtobay .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -967,41 +972,41 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   border-right-color: #D3D3D3;
 }
 
-#gzjayrxnsh .gt_sourcenote {
+#blsfvtobay .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#gzjayrxnsh .gt_left {
+#blsfvtobay .gt_left {
   text-align: left;
 }
 
-#gzjayrxnsh .gt_center {
+#blsfvtobay .gt_center {
   text-align: center;
 }
 
-#gzjayrxnsh .gt_right {
+#blsfvtobay .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#gzjayrxnsh .gt_font_normal {
+#blsfvtobay .gt_font_normal {
   font-weight: normal;
 }
 
-#gzjayrxnsh .gt_font_bold {
+#blsfvtobay .gt_font_bold {
   font-weight: bold;
 }
 
-#gzjayrxnsh .gt_font_italic {
+#blsfvtobay .gt_font_italic {
   font-style: italic;
 }
 
-#gzjayrxnsh .gt_super {
+#blsfvtobay .gt_super {
   font-size: 65%;
 }
 
-#gzjayrxnsh .gt_footnote_marks {
+#blsfvtobay .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -1030,7 +1035,6 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
 <div style="margin-bottom:50px;">
 
 </div>
-</div>
 <div id="sensitivity-analysis" class="section level3">
 <h3>Sensitivity analysis</h3>
 <div id="ccg-based-on-test-wise-deletion" class="section level4">
@@ -1047,8 +1051,8 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
 
 </div>
 <div class="figure">
-<div id="htmlwidget-99dd5dbd493aa0183d1d" style="width:100%;height:800px;" class="visNetwork html-widget"></div>
-<script type="application/json" data-for="htmlwidget-99dd5dbd493aa0183d1d">{"x":{"nodes":{"id":["sex","country3","migrant","bage","bf","bweight","preg_week","formula","hdiet","preg_smoke","age.0","school.0","media.0","bmi.0","bmi_m.0","familymeal.0","income.0","isced.0","pa.0","sleep.0","wb.0","yhei.0","homa.0","age.1","school.1","media.1","bmi.1","bmi_m.1","familymeal.1","income.1","isced.1","pa.1","sleep.1","wb.1","yhei.1","homa.1","age.2","media.2","bmi.2","bmi_m.2","alc.2","familymeal.2","income.2","isced.2","pa.2","pub.2","sleep.2","smoke.2","wb.2","yhei.2","homa.2"],"label":["Sex","Region","Migrant","Mother's age\nat birth","Total\nbreastfeeding","Birthweight","Weeks of\npregnancy","Formula milk","HH diet","Smoking\nduring pregnancy","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","AVM","BMI","Mother's BMI","Alcohol","Daily\nfamily meals","Income","ISCED","PA","Puberty","Sleep","Smoking","Well-being","YHEI","HOMA"],"group":["background","background","background","early life","early life","early life","early life","early life","early life","early life","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2"],"level":[1,1,1,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],"color.background":["#afa8b3","#afa8b3","#afa8b3","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F"],"color.border":["#afa8b3","#afa8b3","#afa8b3","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F"],"color.highlight.background":["#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B"],"color.highlight.border":["#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B"],"x":[-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429],"y":[-1,-1,-1,-1,-1,-1,-1,-1,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,0,0,0,0,0,0,0,0,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,1,1,1]},"edges":{"from":["sex","sex","sex","sex","sex","sex","sex","sex","sex","country3","country3","country3","country3","country3","country3","migrant","migrant","migrant","migrant","migrant","migrant","migrant","migrant","migrant","migrant","migrant","migrant","migrant","income.0","income.0","income.0","isced.0","isced.0","isced.0","isced.0","isced.0","isced.0","isced.0","isced.0","isced.0","bage","bage","bage","bage","bage","bage","bage","bage","bage","bf","bf","bweight","bweight","bweight","bweight","preg_week","preg_week","preg_week","formula","preg_smoke","preg_smoke","preg_smoke","preg_smoke","preg_smoke","preg_smoke","age.0","age.0","age.0","school.0","school.0","school.0","school.0","school.0","media.0","media.0","media.0","bmi.0","bmi_m.0","bmi_m.0","bmi_m.0","bmi_m.0","bmi_m.0","familymeal.0","familymeal.0","familymeal.0","familymeal.0","pa.0","pa.0","pa.0","sleep.0","sleep.0","wb.0","wb.0","yhei.0","homa.0","age.1","age.1","age.1","school.1","school.1","school.1","school.1","media.1","media.1","media.1","bmi_m.1","bmi_m.1","familymeal.1","income.1","income.1","income.1","income.1","income.1","isced.1","isced.1","isced.1","pa.1","pa.1","pa.1","sleep.1","sleep.1","wb.1","wb.1","wb.1","yhei.1","yhei.1","age.2","age.2","media.2","media.2","bmi_m.2","isced.2","isced.2","pa.2","pub.2","pub.2","sleep.2","wb.2","wb.2"],"to":["bf","hdiet","bmi.0","sleep.0","wb.0","homa.0","familymeal.1","yhei.1","bmi.2","preg_week","bmi.0","wb.0","school.1","income.1","pa.2","income.0","isced.0","bage","bf","bweight","preg_week","formula","hdiet","preg_smoke","bmi.0","familymeal.0","bmi_m.2","familymeal.2","isced.0","preg_smoke","school.1","bage","bf","bweight","preg_week","formula","preg_smoke","bmi.0","familymeal.0","yhei.1","bf","bweight","preg_week","formula","hdiet","preg_smoke","bmi.0","familymeal.0","homa.1","familymeal.0","sleep.0","hdiet","preg_smoke","sleep.0","yhei.1","formula","bmi_m.0","familymeal.0","hdiet","bf","hdiet","media.0","sleep.0","wb.1","homa.2","homa.0","homa.1","bmi.2","media.0","bmi.0","pa.0","wb.0","familymeal.1","bmi.0","sleep.0","wb.0","smoke.2","familymeal.0","pa.0","bmi.1","yhei.1","pub.2","sleep.0","pa.1","sleep.2","homa.2","familymeal.1","sleep.1","sleep.2","media.1","wb.1","pa.0","homa.0","media.2","bmi.2","school.1","familymeal.1","yhei.1","media.1","sleep.1","yhei.1","alc.2","yhei.1","familymeal.2","homa.2","familymeal.1","wb.1","bmi_m.2","bmi_m.1","isced.1","bmi_m.2","income.2","pa.2","bmi.1","yhei.1","income.2","yhei.1","sleep.2","homa.2","media.2","smoke.2","familymeal.1","bmi_m.2","familymeal.2","homa.1","media.2","bmi.2","smoke.2","alc.2","smoke.2","alc.2","pa.2","wb.2","wb.2","sleep.2","homa.2","homa.2","bmi_m.2","yhei.2"],"edges.from":["sex","sex","sex","sex","sex","sex","sex","sex","sex","country3","country3","country3","country3","country3","country3","migrant","migrant","migrant","migrant","migrant","migrant","migrant","migrant","migrant","migrant","migrant","migrant","migrant","income.0","income.0","income.0","isced.0","isced.0","isced.0","isced.0","isced.0","isced.0","isced.0","isced.0","isced.0","bage","bage","bage","bage","bage","bage","bage","bage","bage","bf","bf","bweight","bweight","bweight","bweight","preg_week","preg_week","preg_week","formula","preg_smoke","preg_smoke","preg_smoke","preg_smoke","preg_smoke","preg_smoke","age.0","age.0","age.0","school.0","school.0","school.0","school.0","school.0","media.0","media.0","media.0","bmi.0","bmi_m.0","bmi_m.0","bmi_m.0","bmi_m.0","bmi_m.0","familymeal.0","familymeal.0","familymeal.0","familymeal.0","pa.0","pa.0","pa.0","sleep.0","sleep.0","wb.0","wb.0","yhei.0","homa.0","age.1","age.1","age.1","school.1","school.1","school.1","school.1","media.1","media.1","media.1","bmi_m.1","bmi_m.1","familymeal.1","income.1","income.1","income.1","income.1","income.1","isced.1","isced.1","isced.1","pa.1","pa.1","pa.1","sleep.1","sleep.1","wb.1","wb.1","wb.1","yhei.1","yhei.1","age.2","age.2","media.2","media.2","bmi_m.2","isced.2","isced.2","pa.2","pub.2","pub.2","sleep.2","wb.2","wb.2"],"arrowheads":["arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow"],"arrows.to.enabled":[true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,true,true,true,true,true,false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,false,false,true,true,true,true,true,true,false,true,true,true,true,true,true,true,true,true,false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,true,true,true,false,false,true,true,true,true,false,false,true,true,true]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"physics":false,"shape":"dot","label":["Sex","Region","Migrant","Mother's age\nat birth","Total\nbreastfeeding","Birthweight","Weeks of\npregnancy","Formula milk","HH diet","Smoking\nduring pregnancy","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","AVM","BMI","Mother's BMI","Alcohol","Daily\nfamily meals","Income","ISCED","PA","Puberty","Sleep","Smoking","Well-being","YHEI","HOMA"],"group":["background","background","background","early life","early life","early life","early life","early life","early life","early life","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2"],"font":{"size":32}},"manipulation":{"enabled":false},"layout":{"randomSeed":96},"edges":{"smooth":false,"width":2,"selectionWidth":3,"arrows":"to","color":{"color":"#466286","highlight":"#C62F4B"},"shadow":false},"physics":{"stabilization":false}},"groups":["background","early life","baseline","FU1","FU2"],"width":"100%","height":"800px","idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","igraphlayout":{"type":"square"},"legend":{"width":0.15,"useGroups":false,"position":"left","ncol":1,"stepX":100,"stepY":100,"zoom":true,"nodes":{"label":["Context","Early life","Baseline","FU1","FU2"],"shape":["square","square","dot","dot","dot"],"color.background":["#afa8b3","#4F3824","#D1603D","#DDB967","#D0E37F"],"color.border":["#afa8b3","#4F3824","#D1603D","#DDB967","#D0E37F"]},"nodesToDataframe":true}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-ab2813059a3423be1971" style="width:100%;height:800px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ab2813059a3423be1971">{"x":{"nodes":{"id":["sex","country3","migrant","bage","bf","bweight","preg_week","formula","hdiet","preg_smoke","age.0","school.0","media.0","bmi.0","bmi_m.0","familymeal.0","income.0","isced.0","pa.0","sleep.0","wb.0","yhei.0","homa.0","age.1","school.1","media.1","bmi.1","bmi_m.1","familymeal.1","income.1","isced.1","pa.1","sleep.1","wb.1","yhei.1","homa.1","age.2","media.2","bmi.2","bmi_m.2","alc.2","familymeal.2","income.2","isced.2","pa.2","pub.2","sleep.2","smoke.2","wb.2","yhei.2","homa.2"],"label":["Sex","Region","Migrant","Mother's age\nat birth","Total\nbreastfeeding","Birthweight","Weeks of\npregnancy","Formula milk","HH diet","Smoking\nduring pregnancy","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","AVM","BMI","Mother's BMI","Alcohol","Daily\nfamily meals","Income","ISCED","PA","Puberty","Sleep","Smoking","Well-being","YHEI","HOMA"],"group":["background","background","background","early life","early life","early life","early life","early life","early life","early life","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2"],"level":[1,1,1,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],"color.background":["#afa8b3","#afa8b3","#afa8b3","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F"],"color.border":["#afa8b3","#afa8b3","#afa8b3","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F"],"color.highlight.background":["#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B"],"color.highlight.border":["#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B"],"x":[-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429],"y":[-1,-1,-1,-1,-1,-1,-1,-1,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,0,0,0,0,0,0,0,0,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,1,1,1]},"edges":{"from":["sex","sex","sex","sex","sex","sex","sex","sex","sex","country3","country3","country3","country3","country3","country3","migrant","migrant","migrant","migrant","migrant","migrant","migrant","migrant","migrant","migrant","migrant","migrant","migrant","income.0","income.0","income.0","isced.0","isced.0","isced.0","isced.0","isced.0","isced.0","isced.0","isced.0","isced.0","bage","bage","bage","bage","bage","bage","bage","bage","bage","bf","bf","bweight","bweight","bweight","bweight","preg_week","preg_week","preg_week","formula","preg_smoke","preg_smoke","preg_smoke","preg_smoke","preg_smoke","preg_smoke","age.0","age.0","age.0","school.0","school.0","school.0","school.0","school.0","media.0","media.0","media.0","bmi.0","bmi_m.0","bmi_m.0","bmi_m.0","bmi_m.0","bmi_m.0","familymeal.0","familymeal.0","familymeal.0","familymeal.0","pa.0","pa.0","pa.0","sleep.0","sleep.0","wb.0","wb.0","yhei.0","homa.0","age.1","age.1","age.1","school.1","school.1","school.1","school.1","media.1","media.1","media.1","bmi_m.1","bmi_m.1","familymeal.1","income.1","income.1","income.1","income.1","income.1","isced.1","isced.1","isced.1","pa.1","pa.1","pa.1","sleep.1","sleep.1","wb.1","wb.1","wb.1","yhei.1","yhei.1","age.2","age.2","media.2","media.2","bmi_m.2","isced.2","isced.2","pa.2","pub.2","pub.2","sleep.2","wb.2","wb.2"],"to":["bf","hdiet","bmi.0","sleep.0","wb.0","homa.0","familymeal.1","yhei.1","bmi.2","preg_week","bmi.0","wb.0","school.1","income.1","pa.2","income.0","isced.0","bage","bf","bweight","preg_week","formula","hdiet","preg_smoke","bmi.0","familymeal.0","bmi_m.2","familymeal.2","isced.0","preg_smoke","school.1","bage","bf","bweight","preg_week","formula","preg_smoke","bmi.0","familymeal.0","yhei.1","bf","bweight","preg_week","formula","hdiet","preg_smoke","bmi.0","familymeal.0","homa.1","familymeal.0","sleep.0","hdiet","preg_smoke","sleep.0","yhei.1","formula","bmi_m.0","familymeal.0","hdiet","bf","hdiet","media.0","sleep.0","wb.1","homa.2","homa.0","homa.1","bmi.2","media.0","bmi.0","pa.0","wb.0","familymeal.1","bmi.0","sleep.0","wb.0","smoke.2","familymeal.0","pa.0","bmi.1","yhei.1","pub.2","sleep.0","pa.1","sleep.2","homa.2","familymeal.1","sleep.1","sleep.2","media.1","wb.1","pa.0","homa.0","media.2","bmi.2","school.1","familymeal.1","yhei.1","media.1","sleep.1","yhei.1","alc.2","yhei.1","familymeal.2","homa.2","familymeal.1","wb.1","bmi_m.2","bmi_m.1","isced.1","bmi_m.2","income.2","pa.2","bmi.1","yhei.1","income.2","yhei.1","sleep.2","homa.2","media.2","smoke.2","familymeal.1","bmi_m.2","familymeal.2","homa.1","media.2","bmi.2","smoke.2","alc.2","smoke.2","alc.2","pa.2","wb.2","wb.2","sleep.2","homa.2","homa.2","bmi_m.2","yhei.2"],"edges.from":["sex","sex","sex","sex","sex","sex","sex","sex","sex","country3","country3","country3","country3","country3","country3","migrant","migrant","migrant","migrant","migrant","migrant","migrant","migrant","migrant","migrant","migrant","migrant","migrant","income.0","income.0","income.0","isced.0","isced.0","isced.0","isced.0","isced.0","isced.0","isced.0","isced.0","isced.0","bage","bage","bage","bage","bage","bage","bage","bage","bage","bf","bf","bweight","bweight","bweight","bweight","preg_week","preg_week","preg_week","formula","preg_smoke","preg_smoke","preg_smoke","preg_smoke","preg_smoke","preg_smoke","age.0","age.0","age.0","school.0","school.0","school.0","school.0","school.0","media.0","media.0","media.0","bmi.0","bmi_m.0","bmi_m.0","bmi_m.0","bmi_m.0","bmi_m.0","familymeal.0","familymeal.0","familymeal.0","familymeal.0","pa.0","pa.0","pa.0","sleep.0","sleep.0","wb.0","wb.0","yhei.0","homa.0","age.1","age.1","age.1","school.1","school.1","school.1","school.1","media.1","media.1","media.1","bmi_m.1","bmi_m.1","familymeal.1","income.1","income.1","income.1","income.1","income.1","isced.1","isced.1","isced.1","pa.1","pa.1","pa.1","sleep.1","sleep.1","wb.1","wb.1","wb.1","yhei.1","yhei.1","age.2","age.2","media.2","media.2","bmi_m.2","isced.2","isced.2","pa.2","pub.2","pub.2","sleep.2","wb.2","wb.2"],"arrowheads":["arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow"],"arrows.to.enabled":[true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,true,true,true,true,true,false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,false,false,true,true,true,true,true,true,false,true,true,true,true,true,true,true,true,true,false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,true,true,true,false,false,true,true,true,true,false,false,true,true,true]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"physics":false,"shape":"dot","label":["Sex","Region","Migrant","Mother's age\nat birth","Total\nbreastfeeding","Birthweight","Weeks of\npregnancy","Formula milk","HH diet","Smoking\nduring pregnancy","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","AVM","BMI","Mother's BMI","Alcohol","Daily\nfamily meals","Income","ISCED","PA","Puberty","Sleep","Smoking","Well-being","YHEI","HOMA"],"group":["background","background","background","early life","early life","early life","early life","early life","early life","early life","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2"],"font":{"size":32}},"manipulation":{"enabled":false},"layout":{"randomSeed":96},"edges":{"smooth":false,"width":2,"selectionWidth":3,"arrows":"to","color":{"color":"#466286","highlight":"#C62F4B"},"shadow":false},"physics":{"stabilization":false}},"groups":["background","early life","baseline","FU1","FU2"],"width":"100%","height":"800px","idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","igraphlayout":{"type":"square"},"legend":{"width":0.15,"useGroups":false,"position":"left","ncol":1,"stepX":100,"stepY":100,"zoom":true,"nodes":{"label":["Context","Early life","Baseline","FU1","FU2"],"shape":["square","square","dot","dot","dot"],"color.background":["#afa8b3","#4F3824","#D1603D","#DDB967","#D0E37F"],"color.border":["#afa8b3","#4F3824","#D1603D","#DDB967","#D0E37F"]},"nodesToDataframe":true}},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
 <strong>Fig.2</strong> CCG based on <em>test-wise deletion</em>. Each performed conditional independence test between two variables given a set of variables was computed using all complete observations on these variables.
 </p>
@@ -1056,12 +1060,12 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
 <div style="margin-bottom:50px;">
 
 </div>
-<div id="ctaptojhjn" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="xehjrdtxqi" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#ctaptojhjn .gt_table {
+#xehjrdtxqi .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1086,7 +1090,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   border-left-color: #D3D3D3;
 }
 
-#ctaptojhjn .gt_heading {
+#xehjrdtxqi .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1098,7 +1102,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   border-right-color: #D3D3D3;
 }
 
-#ctaptojhjn .gt_title {
+#xehjrdtxqi .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1108,7 +1112,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   border-bottom-width: 0;
 }
 
-#ctaptojhjn .gt_subtitle {
+#xehjrdtxqi .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1118,13 +1122,13 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   border-top-width: 0;
 }
 
-#ctaptojhjn .gt_bottom_border {
+#xehjrdtxqi .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ctaptojhjn .gt_col_headings {
+#xehjrdtxqi .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1139,7 +1143,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   border-right-color: #D3D3D3;
 }
 
-#ctaptojhjn .gt_col_heading {
+#xehjrdtxqi .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1159,7 +1163,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   overflow-x: hidden;
 }
 
-#ctaptojhjn .gt_column_spanner_outer {
+#xehjrdtxqi .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1171,15 +1175,15 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   padding-right: 4px;
 }
 
-#ctaptojhjn .gt_column_spanner_outer:first-child {
+#xehjrdtxqi .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ctaptojhjn .gt_column_spanner_outer:last-child {
+#xehjrdtxqi .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ctaptojhjn .gt_column_spanner {
+#xehjrdtxqi .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1191,7 +1195,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   width: 100%;
 }
 
-#ctaptojhjn .gt_group_heading {
+#xehjrdtxqi .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1213,7 +1217,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   vertical-align: middle;
 }
 
-#ctaptojhjn .gt_empty_group_heading {
+#xehjrdtxqi .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1228,15 +1232,15 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   vertical-align: middle;
 }
 
-#ctaptojhjn .gt_from_md > :first-child {
+#xehjrdtxqi .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ctaptojhjn .gt_from_md > :last-child {
+#xehjrdtxqi .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ctaptojhjn .gt_row {
+#xehjrdtxqi .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1255,7 +1259,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   overflow-x: hidden;
 }
 
-#ctaptojhjn .gt_stub {
+#xehjrdtxqi .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1267,7 +1271,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   padding-left: 12px;
 }
 
-#ctaptojhjn .gt_summary_row {
+#xehjrdtxqi .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1277,7 +1281,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   padding-right: 5px;
 }
 
-#ctaptojhjn .gt_first_summary_row {
+#xehjrdtxqi .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1287,7 +1291,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   border-top-color: #D3D3D3;
 }
 
-#ctaptojhjn .gt_grand_summary_row {
+#xehjrdtxqi .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1297,7 +1301,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   padding-right: 5px;
 }
 
-#ctaptojhjn .gt_first_grand_summary_row {
+#xehjrdtxqi .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1307,11 +1311,11 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   border-top-color: #D3D3D3;
 }
 
-#ctaptojhjn .gt_striped {
+#xehjrdtxqi .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ctaptojhjn .gt_table_body {
+#xehjrdtxqi .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1320,7 +1324,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   border-bottom-color: #D3D3D3;
 }
 
-#ctaptojhjn .gt_footnotes {
+#xehjrdtxqi .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1334,13 +1338,13 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   border-right-color: #D3D3D3;
 }
 
-#ctaptojhjn .gt_footnote {
+#xehjrdtxqi .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#ctaptojhjn .gt_sourcenotes {
+#xehjrdtxqi .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1354,41 +1358,41 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   border-right-color: #D3D3D3;
 }
 
-#ctaptojhjn .gt_sourcenote {
+#xehjrdtxqi .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#ctaptojhjn .gt_left {
+#xehjrdtxqi .gt_left {
   text-align: left;
 }
 
-#ctaptojhjn .gt_center {
+#xehjrdtxqi .gt_center {
   text-align: center;
 }
 
-#ctaptojhjn .gt_right {
+#xehjrdtxqi .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ctaptojhjn .gt_font_normal {
+#xehjrdtxqi .gt_font_normal {
   font-weight: normal;
 }
 
-#ctaptojhjn .gt_font_bold {
+#xehjrdtxqi .gt_font_bold {
   font-weight: bold;
 }
 
-#ctaptojhjn .gt_font_italic {
+#xehjrdtxqi .gt_font_italic {
   font-style: italic;
 }
 
-#ctaptojhjn .gt_super {
+#xehjrdtxqi .gt_super {
   font-size: 65%;
 }
 
-#ctaptojhjn .gt_footnote_marks {
+#xehjrdtxqi .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -1433,8 +1437,8 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
 <h3>Bootstrap CCGs</h3>
 <p>For each bootstrap sample the data was once imputed using mice based on random forest imputation. The following CCGs base on 100 bootstrap replications.</p>
 <div class="figure">
-<div id="htmlwidget-d1d70d92bf47e2fadbbb" style="width:100%;height:800px;" class="visNetwork html-widget"></div>
-<script type="application/json" data-for="htmlwidget-d1d70d92bf47e2fadbbb">{"x":{"nodes":{"id":["sex","country3","migrant","bage","bf","bweight","preg_week","formula","hdiet","preg_smoke","age.0","school.0","media.0","bmi.0","bmi_m.0","familymeal.0","income.0","isced.0","pa.0","sleep.0","wb.0","yhei.0","homa.0","age.1","school.1","media.1","bmi.1","bmi_m.1","familymeal.1","income.1","isced.1","pa.1","sleep.1","wb.1","yhei.1","homa.1","age.2","media.2","bmi.2","bmi_m.2","alc.2","familymeal.2","income.2","isced.2","pa.2","pub.2","sleep.2","smoke.2","wb.2","yhei.2","homa.2"],"label":["Sex","Region","Migrant","Mother's age\nat birth","Total\nbreastfeeding","Birthweight","Weeks of\npregnancy","Formula milk","HH diet","Smoking\nduring pregnancy","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","AVM","BMI","Mother's BMI","Alcohol","Daily\nfamily meals","Income","ISCED","PA","Puberty","Sleep","Smoking","Well-being","YHEI","HOMA"],"group":["background","background","background","early life","early life","early life","early life","early life","early life","early life","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2"],"level":[1,1,1,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],"color.background":["#afa8b3","#afa8b3","#afa8b3","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F"],"color.border":["#afa8b3","#afa8b3","#afa8b3","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F"],"color.highlight.background":["#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B"],"color.highlight.border":["#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B"],"x":[-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429],"y":[-1,-1,-1,-1,-1,-1,-1,-1,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,0,0,0,0,0,0,0,0,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,1,1,1]},"edges":{"from":["sex","sex","sex","sex","sex","sex","country3","country3","country3","country3","country3","country3","country3","migrant","income.0","income.0","income.0","income.0","income.0","income.0","isced.0","isced.0","isced.0","isced.0","bage","bage","bage","bage","bweight","bweight","preg_week","preg_week","preg_week","formula","hdiet","hdiet","hdiet","age.0","age.0","age.0","age.0","age.0","school.0","school.0","school.0","school.0","school.0","school.0","school.0","school.0","school.0","school.0","media.0","media.0","bmi.0","bmi.0","bmi_m.0","bmi_m.0","bmi_m.0","familymeal.0","familymeal.0","familymeal.0","familymeal.0","pa.0","pa.0","pa.0","sleep.0","sleep.0","wb.0","wb.0","yhei.0","yhei.0","yhei.0","yhei.0","yhei.0","yhei.0","homa.0","homa.0","age.1","age.1","age.1","age.1","school.1","media.1","media.1","bmi.1","bmi.1","familymeal.1","income.1","income.1","income.1","income.1","isced.1","isced.1","pa.1","pa.1","pa.1","sleep.1","wb.1","wb.1","yhei.1","yhei.1","yhei.1","homa.1","homa.1","age.2","age.2","age.2","age.2","age.2","age.2","age.2","age.2","bmi.2","bmi.2","bmi_m.2","bmi_m.2","bmi_m.2","alc.2","alc.2","income.2","pub.2","smoke.2","smoke.2","wb.2","wb.2","yhei.2","homa.2"],"to":["bweight","media.0","media.1","pa.1","media.2","pa.2","income.0","isced.0","bf","bweight","formula","hdiet","sleep.0","income.0","isced.0","hdiet","bmi_m.0","pa.0","sleep.0","income.1","income.0","bage","bmi_m.0","isced.1","formula","hdiet","bmi_m.0","familymeal.0","bmi.0","bmi_m.0","bweight","formula","preg_smoke","bf","bf","familymeal.0","familymeal.1","school.0","media.0","pa.0","alc.2","pub.2","media.0","familymeal.0","sleep.0","wb.0","homa.0","sleep.1","wb.1","media.2","sleep.2","wb.2","media.1","media.2","bmi.1","pub.2","bmi.0","familymeal.0","bmi.1","yhei.0","bmi_m.1","familymeal.1","familymeal.2","yhei.0","pa.1","pa.2","sleep.1","sleep.2","yhei.0","wb.1","media.0","familymeal.0","pa.0","wb.0","yhei.1","yhei.2","bmi.0","homa.1","school.1","sleep.1","alc.2","pub.2","familymeal.1","media.2","familymeal.2","homa.1","bmi.2","yhei.1","bmi_m.1","familymeal.1","isced.1","income.2","bmi_m.1","isced.2","wb.1","yhei.1","pa.2","sleep.2","pa.1","wb.2","familymeal.1","wb.1","yhei.2","pub.2","homa.2","media.2","alc.2","pub.2","sleep.2","smoke.2","wb.2","yhei.2","homa.2","pub.2","homa.2","bmi.2","familymeal.2","pub.2","smoke.2","wb.2","bmi.2","media.2","alc.2","wb.2","media.2","smoke.2","media.2","bmi.2"],"edges.from":["sex","sex","sex","sex","sex","sex","country3","country3","country3","country3","country3","country3","country3","migrant","income.0","income.0","income.0","income.0","income.0","income.0","isced.0","isced.0","isced.0","isced.0","bage","bage","bage","bage","bweight","bweight","preg_week","preg_week","preg_week","formula","hdiet","hdiet","hdiet","age.0","age.0","age.0","age.0","age.0","school.0","school.0","school.0","school.0","school.0","school.0","school.0","school.0","school.0","school.0","media.0","media.0","bmi.0","bmi.0","bmi_m.0","bmi_m.0","bmi_m.0","familymeal.0","familymeal.0","familymeal.0","familymeal.0","pa.0","pa.0","pa.0","sleep.0","sleep.0","wb.0","wb.0","yhei.0","yhei.0","yhei.0","yhei.0","yhei.0","yhei.0","homa.0","homa.0","age.1","age.1","age.1","age.1","school.1","media.1","media.1","bmi.1","bmi.1","familymeal.1","income.1","income.1","income.1","income.1","isced.1","isced.1","pa.1","pa.1","pa.1","sleep.1","wb.1","wb.1","yhei.1","yhei.1","yhei.1","homa.1","homa.1","age.2","age.2","age.2","age.2","age.2","age.2","age.2","age.2","bmi.2","bmi.2","bmi_m.2","bmi_m.2","bmi_m.2","alc.2","alc.2","income.2","pub.2","smoke.2","smoke.2","wb.2","wb.2","yhei.2","homa.2"],"arrowheads":["arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow"],"arrows.to.enabled":[true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true],"weight":[82,85,95,39,94,95,100,100,70,50,56,52,40,100,35.5,35,57,39,41,67,64.5,46,59,49,59,56,60,57,90,78,66,85,44.5,65.5,46.5,63,43,99,88,42,54,70,67,40,86,78,41,74,36,88,84,39,92,68,94,47,97,35,89,37,35,95,44,45.5,98,73,86,47,44,92,53.5,47,42.5,39,97,93,67,100,100,66,60,91,92,94,49,64,97,45,39,54,35,95,44,95,52,37,88,84,38,95,48,36.5,95,63,97,66,99,100,93,91,40,53,69,66,54,58,35.5,57,63,48.5,39,49,37,38,43,41,43.5,45]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"physics":false,"shape":"dot","label":["Sex","Region","Migrant","Mother's age\nat birth","Total\nbreastfeeding","Birthweight","Weeks of\npregnancy","Formula milk","HH diet","Smoking\nduring pregnancy","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","AVM","BMI","Mother's BMI","Alcohol","Daily\nfamily meals","Income","ISCED","PA","Puberty","Sleep","Smoking","Well-being","YHEI","HOMA"],"group":["background","background","background","early life","early life","early life","early life","early life","early life","early life","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2"],"font":{"size":32}},"manipulation":{"enabled":false},"edges":{"smooth":false,"width":2,"selectionWidth":3,"arrows":"to","color":{"color":"#466286","highlight":"#C62F4B"},"shadow":false},"physics":{"stabilization":false}},"groups":["background","early life","baseline","FU1","FU2"],"width":"100%","height":"800px","idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","igraphlayout":{"type":"square"},"legend":{"width":0.15,"useGroups":false,"position":"left","ncol":1,"stepX":100,"stepY":100,"zoom":true,"nodes":{"label":["Context","Early life","Baseline","FU1","FU2"],"shape":["square","square","dot","dot","dot"],"color.background":["#afa8b3","#4F3824","#D1603D","#DDB967","#D0E37F"],"color.border":["#afa8b3","#4F3824","#D1603D","#DDB967","#D0E37F"]},"nodesToDataframe":true}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-6d7b2082b14bf9783a33" style="width:100%;height:800px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6d7b2082b14bf9783a33">{"x":{"nodes":{"id":["sex","country3","migrant","bage","bf","bweight","preg_week","formula","hdiet","preg_smoke","age.0","school.0","media.0","bmi.0","bmi_m.0","familymeal.0","income.0","isced.0","pa.0","sleep.0","wb.0","yhei.0","homa.0","age.1","school.1","media.1","bmi.1","bmi_m.1","familymeal.1","income.1","isced.1","pa.1","sleep.1","wb.1","yhei.1","homa.1","age.2","media.2","bmi.2","bmi_m.2","alc.2","familymeal.2","income.2","isced.2","pa.2","pub.2","sleep.2","smoke.2","wb.2","yhei.2","homa.2"],"label":["Sex","Region","Migrant","Mother's age\nat birth","Total\nbreastfeeding","Birthweight","Weeks of\npregnancy","Formula milk","HH diet","Smoking\nduring pregnancy","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","AVM","BMI","Mother's BMI","Alcohol","Daily\nfamily meals","Income","ISCED","PA","Puberty","Sleep","Smoking","Well-being","YHEI","HOMA"],"group":["background","background","background","early life","early life","early life","early life","early life","early life","early life","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2"],"level":[1,1,1,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],"color.background":["#afa8b3","#afa8b3","#afa8b3","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F"],"color.border":["#afa8b3","#afa8b3","#afa8b3","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F"],"color.highlight.background":["#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B"],"color.highlight.border":["#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B"],"x":[-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429],"y":[-1,-1,-1,-1,-1,-1,-1,-1,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,0,0,0,0,0,0,0,0,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,1,1,1]},"edges":{"from":["sex","sex","sex","sex","sex","sex","country3","country3","country3","country3","country3","country3","country3","migrant","income.0","income.0","income.0","income.0","income.0","income.0","isced.0","isced.0","isced.0","isced.0","bage","bage","bage","bage","bweight","bweight","preg_week","preg_week","preg_week","formula","hdiet","hdiet","hdiet","age.0","age.0","age.0","age.0","age.0","school.0","school.0","school.0","school.0","school.0","school.0","school.0","school.0","school.0","school.0","media.0","media.0","bmi.0","bmi.0","bmi_m.0","bmi_m.0","bmi_m.0","familymeal.0","familymeal.0","familymeal.0","familymeal.0","pa.0","pa.0","pa.0","sleep.0","sleep.0","wb.0","wb.0","yhei.0","yhei.0","yhei.0","yhei.0","yhei.0","yhei.0","homa.0","homa.0","age.1","age.1","age.1","age.1","school.1","media.1","media.1","bmi.1","bmi.1","familymeal.1","income.1","income.1","income.1","income.1","isced.1","isced.1","pa.1","pa.1","pa.1","sleep.1","wb.1","wb.1","yhei.1","yhei.1","yhei.1","homa.1","homa.1","age.2","age.2","age.2","age.2","age.2","age.2","age.2","age.2","bmi.2","bmi.2","bmi_m.2","bmi_m.2","bmi_m.2","alc.2","alc.2","income.2","pub.2","smoke.2","smoke.2","wb.2","wb.2","yhei.2","homa.2"],"to":["bweight","media.0","media.1","pa.1","media.2","pa.2","income.0","isced.0","bf","bweight","formula","hdiet","sleep.0","income.0","isced.0","hdiet","bmi_m.0","pa.0","sleep.0","income.1","income.0","bage","bmi_m.0","isced.1","formula","hdiet","bmi_m.0","familymeal.0","bmi.0","bmi_m.0","bweight","formula","preg_smoke","bf","bf","familymeal.0","familymeal.1","school.0","media.0","pa.0","alc.2","pub.2","media.0","familymeal.0","sleep.0","wb.0","homa.0","sleep.1","wb.1","media.2","sleep.2","wb.2","media.1","media.2","bmi.1","pub.2","bmi.0","familymeal.0","bmi.1","yhei.0","bmi_m.1","familymeal.1","familymeal.2","yhei.0","pa.1","pa.2","sleep.1","sleep.2","yhei.0","wb.1","media.0","familymeal.0","pa.0","wb.0","yhei.1","yhei.2","bmi.0","homa.1","school.1","sleep.1","alc.2","pub.2","familymeal.1","media.2","familymeal.2","homa.1","bmi.2","yhei.1","bmi_m.1","familymeal.1","isced.1","income.2","bmi_m.1","isced.2","wb.1","yhei.1","pa.2","sleep.2","pa.1","wb.2","familymeal.1","wb.1","yhei.2","pub.2","homa.2","media.2","alc.2","pub.2","sleep.2","smoke.2","wb.2","yhei.2","homa.2","pub.2","homa.2","bmi.2","familymeal.2","pub.2","smoke.2","wb.2","bmi.2","media.2","alc.2","wb.2","media.2","smoke.2","media.2","bmi.2"],"edges.from":["sex","sex","sex","sex","sex","sex","country3","country3","country3","country3","country3","country3","country3","migrant","income.0","income.0","income.0","income.0","income.0","income.0","isced.0","isced.0","isced.0","isced.0","bage","bage","bage","bage","bweight","bweight","preg_week","preg_week","preg_week","formula","hdiet","hdiet","hdiet","age.0","age.0","age.0","age.0","age.0","school.0","school.0","school.0","school.0","school.0","school.0","school.0","school.0","school.0","school.0","media.0","media.0","bmi.0","bmi.0","bmi_m.0","bmi_m.0","bmi_m.0","familymeal.0","familymeal.0","familymeal.0","familymeal.0","pa.0","pa.0","pa.0","sleep.0","sleep.0","wb.0","wb.0","yhei.0","yhei.0","yhei.0","yhei.0","yhei.0","yhei.0","homa.0","homa.0","age.1","age.1","age.1","age.1","school.1","media.1","media.1","bmi.1","bmi.1","familymeal.1","income.1","income.1","income.1","income.1","isced.1","isced.1","pa.1","pa.1","pa.1","sleep.1","wb.1","wb.1","yhei.1","yhei.1","yhei.1","homa.1","homa.1","age.2","age.2","age.2","age.2","age.2","age.2","age.2","age.2","bmi.2","bmi.2","bmi_m.2","bmi_m.2","bmi_m.2","alc.2","alc.2","income.2","pub.2","smoke.2","smoke.2","wb.2","wb.2","yhei.2","homa.2"],"arrowheads":["arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow"],"arrows.to.enabled":[true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true],"weight":[82,85,95,39,94,95,100,100,70,50,56,52,40,100,35.5,35,57,39,41,67,64.5,46,59,49,59,56,60,57,90,78,66,85,44.5,65.5,46.5,63,43,99,88,42,54,70,67,40,86,78,41,74,36,88,84,39,92,68,94,47,97,35,89,37,35,95,44,45.5,98,73,86,47,44,92,53.5,47,42.5,39,97,93,67,100,100,66,60,91,92,94,49,64,97,45,39,54,35,95,44,95,52,37,88,84,38,95,48,36.5,95,63,97,66,99,100,93,91,40,53,69,66,54,58,35.5,57,63,48.5,39,49,37,38,43,41,43.5,45]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"physics":false,"shape":"dot","label":["Sex","Region","Migrant","Mother's age\nat birth","Total\nbreastfeeding","Birthweight","Weeks of\npregnancy","Formula milk","HH diet","Smoking\nduring pregnancy","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","AVM","BMI","Mother's BMI","Alcohol","Daily\nfamily meals","Income","ISCED","PA","Puberty","Sleep","Smoking","Well-being","YHEI","HOMA"],"group":["background","background","background","early life","early life","early life","early life","early life","early life","early life","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2"],"font":{"size":32}},"manipulation":{"enabled":false},"edges":{"smooth":false,"width":2,"selectionWidth":3,"arrows":"to","color":{"color":"#466286","highlight":"#C62F4B"},"shadow":false},"physics":{"stabilization":false}},"groups":["background","early life","baseline","FU1","FU2"],"width":"100%","height":"800px","idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","igraphlayout":{"type":"square"},"legend":{"width":0.15,"useGroups":false,"position":"left","ncol":1,"stepX":100,"stepY":100,"zoom":true,"nodes":{"label":["Context","Early life","Baseline","FU1","FU2"],"shape":["square","square","dot","dot","dot"],"color.background":["#afa8b3","#4F3824","#D1603D","#DDB967","#D0E37F"],"color.border":["#afa8b3","#4F3824","#D1603D","#DDB967","#D0E37F"]},"nodesToDataframe":true}},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
 <strong>Fig.3</strong> Bootstrapped CCG with edges frequencies larger equal than <strong>35 %</strong>
 </p>
@@ -1443,8 +1447,8 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
 
 </div>
 <div class="figure">
-<div id="htmlwidget-9360af7e73ae4907bca9" style="width:100%;height:800px;" class="visNetwork html-widget"></div>
-<script type="application/json" data-for="htmlwidget-9360af7e73ae4907bca9">{"x":{"nodes":{"id":["sex","country3","migrant","bage","bf","bweight","preg_week","formula","hdiet","preg_smoke","age.0","school.0","media.0","bmi.0","bmi_m.0","familymeal.0","income.0","isced.0","pa.0","sleep.0","wb.0","yhei.0","homa.0","age.1","school.1","media.1","bmi.1","bmi_m.1","familymeal.1","income.1","isced.1","pa.1","sleep.1","wb.1","yhei.1","homa.1","age.2","media.2","bmi.2","bmi_m.2","alc.2","familymeal.2","income.2","isced.2","pa.2","pub.2","sleep.2","smoke.2","wb.2","yhei.2","homa.2"],"label":["Sex","Region","Migrant","Mother's age\nat birth","Total\nbreastfeeding","Birthweight","Weeks of\npregnancy","Formula milk","HH diet","Smoking\nduring pregnancy","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","AVM","BMI","Mother's BMI","Alcohol","Daily\nfamily meals","Income","ISCED","PA","Puberty","Sleep","Smoking","Well-being","YHEI","HOMA"],"group":["background","background","background","early life","early life","early life","early life","early life","early life","early life","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2"],"level":[1,1,1,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],"color.background":["#afa8b3","#afa8b3","#afa8b3","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F"],"color.border":["#afa8b3","#afa8b3","#afa8b3","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F"],"color.highlight.background":["#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B"],"color.highlight.border":["#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B"],"x":[-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429],"y":[-1,-1,-1,-1,-1,-1,-1,-1,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,0,0,0,0,0,0,0,0,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,1,1,1]},"edges":{"from":["sex","sex","sex","sex","sex","country3","country3","migrant","bweight","bweight","preg_week","age.0","age.0","school.0","school.0","school.0","school.0","media.0","bmi.0","bmi_m.0","bmi_m.0","familymeal.0","pa.0","sleep.0","wb.0","yhei.0","yhei.0","homa.0","age.1","age.1","school.1","media.1","bmi.1","income.1","isced.1","pa.1","sleep.1","wb.1","yhei.1","homa.1","age.2","age.2","age.2","age.2"],"to":["bweight","media.0","media.1","media.2","pa.2","income.0","isced.0","income.0","bmi.0","bmi_m.0","formula","school.0","media.0","sleep.0","wb.0","media.2","sleep.2","media.1","bmi.1","bmi.0","bmi.1","familymeal.1","pa.1","sleep.1","wb.1","yhei.1","yhei.2","homa.1","school.1","pub.2","familymeal.1","media.2","bmi.2","income.2","isced.2","pa.2","sleep.2","wb.2","yhei.2","homa.2","alc.2","pub.2","sleep.2","smoke.2"],"edges.from":["sex","sex","sex","sex","sex","country3","country3","migrant","bweight","bweight","preg_week","age.0","age.0","school.0","school.0","school.0","school.0","media.0","bmi.0","bmi_m.0","bmi_m.0","familymeal.0","pa.0","sleep.0","wb.0","yhei.0","yhei.0","homa.0","age.1","age.1","school.1","media.1","bmi.1","income.1","isced.1","pa.1","sleep.1","wb.1","yhei.1","homa.1","age.2","age.2","age.2","age.2"],"arrowheads":["arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow"],"arrows.to.enabled":[true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true],"weight":[82,85,95,94,95,100,100,100,90,78,85,99,88,86,78,88,84,92,94,97,89,95,98,86,92,97,93,100,100,91,92,94,97,95,95,88,84,95,95,97,99,100,93,91]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"physics":false,"shape":"dot","label":["Sex","Region","Migrant","Mother's age\nat birth","Total\nbreastfeeding","Birthweight","Weeks of\npregnancy","Formula milk","HH diet","Smoking\nduring pregnancy","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","AVM","BMI","Mother's BMI","Alcohol","Daily\nfamily meals","Income","ISCED","PA","Puberty","Sleep","Smoking","Well-being","YHEI","HOMA"],"group":["background","background","background","early life","early life","early life","early life","early life","early life","early life","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2"],"font":{"size":32}},"manipulation":{"enabled":false},"edges":{"smooth":false,"width":2,"selectionWidth":3,"arrows":"to","color":{"color":"#466286","highlight":"#C62F4B"},"shadow":false},"physics":{"stabilization":false}},"groups":["background","early life","baseline","FU1","FU2"],"width":"100%","height":"800px","idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","igraphlayout":{"type":"square"},"legend":{"width":0.15,"useGroups":false,"position":"left","ncol":1,"stepX":100,"stepY":100,"zoom":true,"nodes":{"label":["Context","Early life","Baseline","FU1","FU2"],"shape":["square","square","dot","dot","dot"],"color.background":["#afa8b3","#4F3824","#D1603D","#DDB967","#D0E37F"],"color.border":["#afa8b3","#4F3824","#D1603D","#DDB967","#D0E37F"]},"nodesToDataframe":true}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-879953c0371bf443612b" style="width:100%;height:800px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-879953c0371bf443612b">{"x":{"nodes":{"id":["sex","country3","migrant","bage","bf","bweight","preg_week","formula","hdiet","preg_smoke","age.0","school.0","media.0","bmi.0","bmi_m.0","familymeal.0","income.0","isced.0","pa.0","sleep.0","wb.0","yhei.0","homa.0","age.1","school.1","media.1","bmi.1","bmi_m.1","familymeal.1","income.1","isced.1","pa.1","sleep.1","wb.1","yhei.1","homa.1","age.2","media.2","bmi.2","bmi_m.2","alc.2","familymeal.2","income.2","isced.2","pa.2","pub.2","sleep.2","smoke.2","wb.2","yhei.2","homa.2"],"label":["Sex","Region","Migrant","Mother's age\nat birth","Total\nbreastfeeding","Birthweight","Weeks of\npregnancy","Formula milk","HH diet","Smoking\nduring pregnancy","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","AVM","BMI","Mother's BMI","Alcohol","Daily\nfamily meals","Income","ISCED","PA","Puberty","Sleep","Smoking","Well-being","YHEI","HOMA"],"group":["background","background","background","early life","early life","early life","early life","early life","early life","early life","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2"],"level":[1,1,1,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],"color.background":["#afa8b3","#afa8b3","#afa8b3","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F"],"color.border":["#afa8b3","#afa8b3","#afa8b3","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F"],"color.highlight.background":["#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B"],"color.highlight.border":["#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B"],"x":[-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429],"y":[-1,-1,-1,-1,-1,-1,-1,-1,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,0,0,0,0,0,0,0,0,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,1,1,1]},"edges":{"from":["sex","sex","sex","sex","sex","country3","country3","migrant","bweight","bweight","preg_week","age.0","age.0","school.0","school.0","school.0","school.0","media.0","bmi.0","bmi_m.0","bmi_m.0","familymeal.0","pa.0","sleep.0","wb.0","yhei.0","yhei.0","homa.0","age.1","age.1","school.1","media.1","bmi.1","income.1","isced.1","pa.1","sleep.1","wb.1","yhei.1","homa.1","age.2","age.2","age.2","age.2"],"to":["bweight","media.0","media.1","media.2","pa.2","income.0","isced.0","income.0","bmi.0","bmi_m.0","formula","school.0","media.0","sleep.0","wb.0","media.2","sleep.2","media.1","bmi.1","bmi.0","bmi.1","familymeal.1","pa.1","sleep.1","wb.1","yhei.1","yhei.2","homa.1","school.1","pub.2","familymeal.1","media.2","bmi.2","income.2","isced.2","pa.2","sleep.2","wb.2","yhei.2","homa.2","alc.2","pub.2","sleep.2","smoke.2"],"edges.from":["sex","sex","sex","sex","sex","country3","country3","migrant","bweight","bweight","preg_week","age.0","age.0","school.0","school.0","school.0","school.0","media.0","bmi.0","bmi_m.0","bmi_m.0","familymeal.0","pa.0","sleep.0","wb.0","yhei.0","yhei.0","homa.0","age.1","age.1","school.1","media.1","bmi.1","income.1","isced.1","pa.1","sleep.1","wb.1","yhei.1","homa.1","age.2","age.2","age.2","age.2"],"arrowheads":["arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow"],"arrows.to.enabled":[true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true],"weight":[82,85,95,94,95,100,100,100,90,78,85,99,88,86,78,88,84,92,94,97,89,95,98,86,92,97,93,100,100,91,92,94,97,95,95,88,84,95,95,97,99,100,93,91]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"physics":false,"shape":"dot","label":["Sex","Region","Migrant","Mother's age\nat birth","Total\nbreastfeeding","Birthweight","Weeks of\npregnancy","Formula milk","HH diet","Smoking\nduring pregnancy","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","AVM","BMI","Mother's BMI","Alcohol","Daily\nfamily meals","Income","ISCED","PA","Puberty","Sleep","Smoking","Well-being","YHEI","HOMA"],"group":["background","background","background","early life","early life","early life","early life","early life","early life","early life","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2"],"font":{"size":32}},"manipulation":{"enabled":false},"edges":{"smooth":false,"width":2,"selectionWidth":3,"arrows":"to","color":{"color":"#466286","highlight":"#C62F4B"},"shadow":false},"physics":{"stabilization":false}},"groups":["background","early life","baseline","FU1","FU2"],"width":"100%","height":"800px","idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","igraphlayout":{"type":"square"},"legend":{"width":0.15,"useGroups":false,"position":"left","ncol":1,"stepX":100,"stepY":100,"zoom":true,"nodes":{"label":["Context","Early life","Baseline","FU1","FU2"],"shape":["square","square","dot","dot","dot"],"color.background":["#afa8b3","#4F3824","#D1603D","#DDB967","#D0E37F"],"color.border":["#afa8b3","#4F3824","#D1603D","#DDB967","#D0E37F"]},"nodesToDataframe":true}},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
 <strong>Fig.4</strong> Bootstrapped CCG with edges frequencies larger equal than <strong>75 %</strong>
 </p>
@@ -1452,12 +1456,12 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
 <div style="margin-bottom:50px;">
 
 </div>
-<div id="zohrzlkrsn" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="twwnxnrois" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#zohrzlkrsn .gt_table {
+#twwnxnrois .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1482,7 +1486,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   border-left-color: #D3D3D3;
 }
 
-#zohrzlkrsn .gt_heading {
+#twwnxnrois .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1494,7 +1498,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   border-right-color: #D3D3D3;
 }
 
-#zohrzlkrsn .gt_title {
+#twwnxnrois .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1504,7 +1508,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   border-bottom-width: 0;
 }
 
-#zohrzlkrsn .gt_subtitle {
+#twwnxnrois .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1514,13 +1518,13 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   border-top-width: 0;
 }
 
-#zohrzlkrsn .gt_bottom_border {
+#twwnxnrois .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#zohrzlkrsn .gt_col_headings {
+#twwnxnrois .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1535,7 +1539,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   border-right-color: #D3D3D3;
 }
 
-#zohrzlkrsn .gt_col_heading {
+#twwnxnrois .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1555,7 +1559,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   overflow-x: hidden;
 }
 
-#zohrzlkrsn .gt_column_spanner_outer {
+#twwnxnrois .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1567,15 +1571,15 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   padding-right: 4px;
 }
 
-#zohrzlkrsn .gt_column_spanner_outer:first-child {
+#twwnxnrois .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#zohrzlkrsn .gt_column_spanner_outer:last-child {
+#twwnxnrois .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#zohrzlkrsn .gt_column_spanner {
+#twwnxnrois .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1587,7 +1591,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   width: 100%;
 }
 
-#zohrzlkrsn .gt_group_heading {
+#twwnxnrois .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1609,7 +1613,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   vertical-align: middle;
 }
 
-#zohrzlkrsn .gt_empty_group_heading {
+#twwnxnrois .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1624,15 +1628,15 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   vertical-align: middle;
 }
 
-#zohrzlkrsn .gt_from_md > :first-child {
+#twwnxnrois .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#zohrzlkrsn .gt_from_md > :last-child {
+#twwnxnrois .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#zohrzlkrsn .gt_row {
+#twwnxnrois .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1651,7 +1655,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   overflow-x: hidden;
 }
 
-#zohrzlkrsn .gt_stub {
+#twwnxnrois .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1663,7 +1667,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   padding-left: 12px;
 }
 
-#zohrzlkrsn .gt_summary_row {
+#twwnxnrois .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1673,7 +1677,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   padding-right: 5px;
 }
 
-#zohrzlkrsn .gt_first_summary_row {
+#twwnxnrois .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1683,7 +1687,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   border-top-color: #D3D3D3;
 }
 
-#zohrzlkrsn .gt_grand_summary_row {
+#twwnxnrois .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1693,7 +1697,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   padding-right: 5px;
 }
 
-#zohrzlkrsn .gt_first_grand_summary_row {
+#twwnxnrois .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1703,11 +1707,11 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   border-top-color: #D3D3D3;
 }
 
-#zohrzlkrsn .gt_striped {
+#twwnxnrois .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#zohrzlkrsn .gt_table_body {
+#twwnxnrois .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1716,7 +1720,7 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   border-bottom-color: #D3D3D3;
 }
 
-#zohrzlkrsn .gt_footnotes {
+#twwnxnrois .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1730,13 +1734,13 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   border-right-color: #D3D3D3;
 }
 
-#zohrzlkrsn .gt_footnote {
+#twwnxnrois .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#zohrzlkrsn .gt_sourcenotes {
+#twwnxnrois .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1750,41 +1754,41 @@ suff.all &lt;- getSuff(my.mids.data, test = &quot;flexMItest&quot;)
   border-right-color: #D3D3D3;
 }
 
-#zohrzlkrsn .gt_sourcenote {
+#twwnxnrois .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#zohrzlkrsn .gt_left {
+#twwnxnrois .gt_left {
   text-align: left;
 }
 
-#zohrzlkrsn .gt_center {
+#twwnxnrois .gt_center {
   text-align: center;
 }
 
-#zohrzlkrsn .gt_right {
+#twwnxnrois .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#zohrzlkrsn .gt_font_normal {
+#twwnxnrois .gt_font_normal {
   font-weight: normal;
 }
 
-#zohrzlkrsn .gt_font_bold {
+#twwnxnrois .gt_font_bold {
   font-weight: bold;
 }
 
-#zohrzlkrsn .gt_font_italic {
+#twwnxnrois .gt_font_italic {
   font-style: italic;
 }
 
-#zohrzlkrsn .gt_super {
+#twwnxnrois .gt_super {
   font-size: 65%;
 }
 
-#zohrzlkrsn .gt_footnote_marks {
+#twwnxnrois .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -1848,8 +1852,8 @@ sem &lt;- structural.em(data.with.missing.values,
 
 </div>
 <div class="figure">
-<div id="htmlwidget-ed3a7d9b99ae2731d9bf" style="width:100%;height:800px;" class="visNetwork html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ed3a7d9b99ae2731d9bf">{"x":{"nodes":{"id":["sex","country3","migrant","bage","bf","bweight","preg_week","formula","hdiet","preg_smoke","age.0","school.0","media.0","bmi.0","bmi_m.0","familymeal.0","income.0","isced.0","pa.0","sleep.0","wb.0","yhei.0","homa.0","age.1","school.1","media.1","bmi.1","bmi_m.1","familymeal.1","income.1","isced.1","pa.1","sleep.1","wb.1","yhei.1","homa.1","age.2","media.2","bmi.2","bmi_m.2","alc.2","familymeal.2","income.2","isced.2","pa.2","pub.2","sleep.2","smoke.2","wb.2","yhei.2","homa.2"],"label":["Sex","Region","Migrant","Mother's age\nat birth","Total\nbreastfeeding","Birthweight","Weeks of\npregnancy","Formula milk","HH diet","Smoking\nduring pregnancy","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","AVM","BMI","Mother's BMI","Alcohol","Daily\nfamily meals","Income","ISCED","PA","Puberty","Sleep","Smoking","Well-being","YHEI","HOMA"],"group":["background","background","background","early life","early life","early life","early life","early life","early life","early life","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2"],"level":[1,1,1,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],"color.background":["#afa8b3","#afa8b3","#afa8b3","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F"],"color.border":["#afa8b3","#afa8b3","#afa8b3","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F"],"color.highlight.background":["#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B"],"color.highlight.border":["#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B"],"x":[-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429],"y":[-1,-1,-1,-1,-1,-1,-1,-1,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,0,0,0,0,0,0,0,0,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,1,1,1]},"edges":{"from":["bmi.0","bmi.1","isced.1","isced.0","yhei.0","media.0","income.0","formula","school.0","income.1","wb.0","school.0","age.1","income.0","school.0","pa.0","yhei.1","country3","country3","media.1","familymeal.0","school.0","bmi.1","isced.0","isced.0","country3","alc.2","isced.0","age.0","school.0","isced.1","country3","country3","country3","country3","wb.1","isced.1","bmi.2","country3","country3","country3","income.0","sleep.1","country3","bmi_m.0","country3","bmi.0","country3","isced.0","country3","income.0","country3","media.0","isced.0","media.2","country3","hdiet","homa.0","yhei.0","sex","country3","alc.2","school.0","preg_smoke","age.0","age.1","age.2","isced.0","country3","school.1","media.0","bmi_m.0","familymeal.1","bmi_m.1","isced.0","bweight","country3","pub.2","country3","country3","sleep.0","income.1","preg_week","school.0","familymeal.0","country3","media.2","isced.0","media.2","pa.0","country3","yhei.0","bweight","bweight","yhei.1","sleep.0","wb.0","age.0","homa.1","bage","sleep.0","sleep.2","bage","sex","pub.2","age.1","yhei.1","sex","country3","sleep.0","bage","bf","age.0","bmi.0","country3","migrant","media.1","wb.0","media.2","age.2","media.0","sleep.0","age.0","sleep.2","sex","pub.2","familymeal.0","wb.0","age.0","sleep.1","wb.1","bage","media.1","bweight","bmi_m.0","pa.2","yhei.1","pa.1","yhei.2","sleep.0","school.0","bf","bmi.0","age.2","bmi.0","sleep.0","hdiet","bmi_m.0","homa.1","age.0"],"to":["bmi.1","bmi.2","isced.2","isced.1","yhei.1","media.1","income.1","bf","school.1","income.2","wb.1","pub.2","sleep.1","isced.0","alc.2","pa.1","yhei.2","sleep.0","income.0","media.2","familymeal.1","media.2","homa.1","isced.2","bmi_m.2","yhei.0","smoke.2","bmi_m.0","media.0","sleep.2","income.1","school.1","homa.0","sleep.1","bweight","wb.2","bmi_m.1","homa.2","preg_week","bmi.0","familymeal.0","income.2","sleep.2","bf","bmi.0","hdiet","homa.0","formula","bage","bmi_m.2","bmi_m.2","bmi.1","yhei.0","sleep.0","yhei.2","wb.0","bf","homa.1","yhei.2","media.0","pa.2","wb.2","familymeal.0","preg_week","bmi.0","bmi.2","sleep.2","preg_smoke","pa.0","familymeal.1","wb.0","bmi.1","yhei.1","bmi.2","formula","bmi.0","yhei.1","bmi.2","media.2","homa.2","sleep.1","pa.1","bweight","yhei.2","homa.0","media.1","wb.2","hdiet","sleep.2","pa.2","familymeal.2","pa.0","bmi_m.1","bmi_m.0","media.1","sleep.2","yhei.0","sleep.0","homa.2","bmi_m.0","homa.1","bmi.2","bmi_m.1","bweight","smoke.2","media.1","wb.1","pa.2","isced.1","yhei.0","wb.0","yhei.0","bmi.1","bmi.2","school.0","income.0","wb.1","wb.2","bmi.2","homa.2","media.2","wb.0","homa.1","wb.2","pub.2","alc.2","familymeal.2","homa.1","wb.0","wb.1","pa.1","media.0","bmi.1","bmi.2","pa.0","wb.2","wb.2","homa.1","wb.2","wb.1","sleep.1","sleep.0","homa.1","wb.2","homa.2","media.0","media.0","media.0","bmi.2","pa.0"],"edges.from":["bmi.0","bmi.1","isced.1","isced.0","yhei.0","media.0","income.0","formula","school.0","income.1","wb.0","school.0","age.1","income.0","school.0","pa.0","yhei.1","country3","country3","media.1","familymeal.0","school.0","bmi.1","isced.0","isced.0","country3","alc.2","isced.0","age.0","school.0","isced.1","country3","country3","country3","country3","wb.1","isced.1","bmi.2","country3","country3","country3","income.0","sleep.1","country3","bmi_m.0","country3","bmi.0","country3","isced.0","country3","income.0","country3","media.0","isced.0","media.2","country3","hdiet","homa.0","yhei.0","sex","country3","alc.2","school.0","preg_smoke","age.0","age.1","age.2","isced.0","country3","school.1","media.0","bmi_m.0","familymeal.1","bmi_m.1","isced.0","bweight","country3","pub.2","country3","country3","sleep.0","income.1","preg_week","school.0","familymeal.0","country3","media.2","isced.0","media.2","pa.0","country3","yhei.0","bweight","bweight","yhei.1","sleep.0","wb.0","age.0","homa.1","bage","sleep.0","sleep.2","bage","sex","pub.2","age.1","yhei.1","sex","country3","sleep.0","bage","bf","age.0","bmi.0","country3","migrant","media.1","wb.0","media.2","age.2","media.0","sleep.0","age.0","sleep.2","sex","pub.2","familymeal.0","wb.0","age.0","sleep.1","wb.1","bage","media.1","bweight","bmi_m.0","pa.2","yhei.1","pa.1","yhei.2","sleep.0","school.0","bf","bmi.0","age.2","bmi.0","sleep.0","hdiet","bmi_m.0","homa.1","age.0"],"arrowheads":["arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow"],"arrows.to.enabled":[true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"physics":false,"shape":"dot","label":["Sex","Region","Migrant","Mother's age\nat birth","Total\nbreastfeeding","Birthweight","Weeks of\npregnancy","Formula milk","HH diet","Smoking\nduring pregnancy","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","AVM","BMI","Mother's BMI","Alcohol","Daily\nfamily meals","Income","ISCED","PA","Puberty","Sleep","Smoking","Well-being","YHEI","HOMA"],"group":["background","background","background","early life","early life","early life","early life","early life","early life","early life","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2"],"font":{"size":32}},"manipulation":{"enabled":false},"edges":{"smooth":false,"width":2,"selectionWidth":3,"arrows":"to","color":{"color":"#466286","highlight":"#C62F4B"},"shadow":false},"physics":{"stabilization":false}},"groups":["background","early life","baseline","FU1","FU2"],"width":"100%","height":"800px","idselection":{"enabled":false},"byselection":{"enabled":false},"main":{"text":"SEM graph","style":"font-family:Georgia, Times New Roman, Times, serif;font-weight:bold;font-size:20px;text-align:center;"},"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","igraphlayout":{"type":"square"},"legend":{"width":0.15,"useGroups":false,"position":"left","ncol":1,"stepX":100,"stepY":100,"zoom":true,"nodes":{"label":["Context","Early life","Baseline","FU1","FU2"],"shape":["square","square","dot","dot","dot"],"color.background":["#afa8b3","#4F3824","#D1603D","#DDB967","#D0E37F"],"color.border":["#afa8b3","#4F3824","#D1603D","#DDB967","#D0E37F"]},"nodesToDataframe":true}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-f28555f32ea1dae01f58" style="width:100%;height:800px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f28555f32ea1dae01f58">{"x":{"nodes":{"id":["sex","country3","migrant","bage","bf","bweight","preg_week","formula","hdiet","preg_smoke","age.0","school.0","media.0","bmi.0","bmi_m.0","familymeal.0","income.0","isced.0","pa.0","sleep.0","wb.0","yhei.0","homa.0","age.1","school.1","media.1","bmi.1","bmi_m.1","familymeal.1","income.1","isced.1","pa.1","sleep.1","wb.1","yhei.1","homa.1","age.2","media.2","bmi.2","bmi_m.2","alc.2","familymeal.2","income.2","isced.2","pa.2","pub.2","sleep.2","smoke.2","wb.2","yhei.2","homa.2"],"label":["Sex","Region","Migrant","Mother's age\nat birth","Total\nbreastfeeding","Birthweight","Weeks of\npregnancy","Formula milk","HH diet","Smoking\nduring pregnancy","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","AVM","BMI","Mother's BMI","Alcohol","Daily\nfamily meals","Income","ISCED","PA","Puberty","Sleep","Smoking","Well-being","YHEI","HOMA"],"group":["background","background","background","early life","early life","early life","early life","early life","early life","early life","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2"],"level":[1,1,1,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],"color.background":["#afa8b3","#afa8b3","#afa8b3","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F"],"color.border":["#afa8b3","#afa8b3","#afa8b3","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#4F3824","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#D1603D","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#DDB967","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F","#D0E37F"],"color.highlight.background":["#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B"],"color.highlight.border":["#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B","#C62F4B"],"x":[-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429,-0.142857142857143,0.142857142857143,0.428571428571429,0.714285714285714,1,-1,-0.714285714285714,-0.428571428571429],"y":[-1,-1,-1,-1,-1,-1,-1,-1,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.666666666666667,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,-0.333333333333333,0,0,0,0,0,0,0,0,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.333333333333333,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,0.666666666666667,1,1,1]},"edges":{"from":["bmi.0","bmi.1","isced.1","isced.0","yhei.0","media.0","income.0","formula","school.0","income.1","wb.0","school.0","age.1","income.0","school.0","pa.0","yhei.1","country3","country3","media.1","familymeal.0","school.0","bmi.1","isced.0","isced.0","country3","alc.2","isced.0","age.0","school.0","isced.1","country3","country3","country3","country3","wb.1","isced.1","bmi.2","country3","country3","country3","income.0","sleep.1","country3","bmi_m.0","country3","bmi.0","country3","isced.0","country3","income.0","country3","media.0","isced.0","media.2","country3","hdiet","homa.0","yhei.0","sex","country3","alc.2","school.0","preg_smoke","age.0","age.1","age.2","isced.0","country3","school.1","media.0","bmi_m.0","familymeal.1","bmi_m.1","isced.0","bweight","country3","pub.2","country3","country3","sleep.0","income.1","preg_week","school.0","familymeal.0","country3","media.2","isced.0","media.2","pa.0","country3","yhei.0","bweight","bweight","yhei.1","sleep.0","wb.0","age.0","homa.1","bage","sleep.0","sleep.2","bage","sex","pub.2","age.1","yhei.1","sex","country3","sleep.0","bage","bf","age.0","bmi.0","country3","migrant","media.1","wb.0","media.2","age.2","media.0","sleep.0","age.0","sleep.2","sex","pub.2","familymeal.0","wb.0","age.0","sleep.1","wb.1","bage","media.1","bweight","bmi_m.0","pa.2","yhei.1","pa.1","yhei.2","sleep.0","school.0","bf","bmi.0","age.2","bmi.0","sleep.0","hdiet","bmi_m.0","homa.1","age.0"],"to":["bmi.1","bmi.2","isced.2","isced.1","yhei.1","media.1","income.1","bf","school.1","income.2","wb.1","pub.2","sleep.1","isced.0","alc.2","pa.1","yhei.2","sleep.0","income.0","media.2","familymeal.1","media.2","homa.1","isced.2","bmi_m.2","yhei.0","smoke.2","bmi_m.0","media.0","sleep.2","income.1","school.1","homa.0","sleep.1","bweight","wb.2","bmi_m.1","homa.2","preg_week","bmi.0","familymeal.0","income.2","sleep.2","bf","bmi.0","hdiet","homa.0","formula","bage","bmi_m.2","bmi_m.2","bmi.1","yhei.0","sleep.0","yhei.2","wb.0","bf","homa.1","yhei.2","media.0","pa.2","wb.2","familymeal.0","preg_week","bmi.0","bmi.2","sleep.2","preg_smoke","pa.0","familymeal.1","wb.0","bmi.1","yhei.1","bmi.2","formula","bmi.0","yhei.1","bmi.2","media.2","homa.2","sleep.1","pa.1","bweight","yhei.2","homa.0","media.1","wb.2","hdiet","sleep.2","pa.2","familymeal.2","pa.0","bmi_m.1","bmi_m.0","media.1","sleep.2","yhei.0","sleep.0","homa.2","bmi_m.0","homa.1","bmi.2","bmi_m.1","bweight","smoke.2","media.1","wb.1","pa.2","isced.1","yhei.0","wb.0","yhei.0","bmi.1","bmi.2","school.0","income.0","wb.1","wb.2","bmi.2","homa.2","media.2","wb.0","homa.1","wb.2","pub.2","alc.2","familymeal.2","homa.1","wb.0","wb.1","pa.1","media.0","bmi.1","bmi.2","pa.0","wb.2","wb.2","homa.1","wb.2","wb.1","sleep.1","sleep.0","homa.1","wb.2","homa.2","media.0","media.0","media.0","bmi.2","pa.0"],"edges.from":["bmi.0","bmi.1","isced.1","isced.0","yhei.0","media.0","income.0","formula","school.0","income.1","wb.0","school.0","age.1","income.0","school.0","pa.0","yhei.1","country3","country3","media.1","familymeal.0","school.0","bmi.1","isced.0","isced.0","country3","alc.2","isced.0","age.0","school.0","isced.1","country3","country3","country3","country3","wb.1","isced.1","bmi.2","country3","country3","country3","income.0","sleep.1","country3","bmi_m.0","country3","bmi.0","country3","isced.0","country3","income.0","country3","media.0","isced.0","media.2","country3","hdiet","homa.0","yhei.0","sex","country3","alc.2","school.0","preg_smoke","age.0","age.1","age.2","isced.0","country3","school.1","media.0","bmi_m.0","familymeal.1","bmi_m.1","isced.0","bweight","country3","pub.2","country3","country3","sleep.0","income.1","preg_week","school.0","familymeal.0","country3","media.2","isced.0","media.2","pa.0","country3","yhei.0","bweight","bweight","yhei.1","sleep.0","wb.0","age.0","homa.1","bage","sleep.0","sleep.2","bage","sex","pub.2","age.1","yhei.1","sex","country3","sleep.0","bage","bf","age.0","bmi.0","country3","migrant","media.1","wb.0","media.2","age.2","media.0","sleep.0","age.0","sleep.2","sex","pub.2","familymeal.0","wb.0","age.0","sleep.1","wb.1","bage","media.1","bweight","bmi_m.0","pa.2","yhei.1","pa.1","yhei.2","sleep.0","school.0","bf","bmi.0","age.2","bmi.0","sleep.0","hdiet","bmi_m.0","homa.1","age.0"],"arrowheads":["arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow","arrow"],"arrows.to.enabled":[true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"physics":false,"shape":"dot","label":["Sex","Region","Migrant","Mother's age\nat birth","Total\nbreastfeeding","Birthweight","Weeks of\npregnancy","Formula milk","HH diet","Smoking\nduring pregnancy","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","School","AVM","BMI","Mother's BMI","Daily\nfamily meals","Income","ISCED","PA","Sleep","Well-being","YHEI","HOMA","Age","AVM","BMI","Mother's BMI","Alcohol","Daily\nfamily meals","Income","ISCED","PA","Puberty","Sleep","Smoking","Well-being","YHEI","HOMA"],"group":["background","background","background","early life","early life","early life","early life","early life","early life","early life","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","baseline","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU1","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2","FU2"],"font":{"size":32}},"manipulation":{"enabled":false},"edges":{"smooth":false,"width":2,"selectionWidth":3,"arrows":"to","color":{"color":"#466286","highlight":"#C62F4B"},"shadow":false},"physics":{"stabilization":false}},"groups":["background","early life","baseline","FU1","FU2"],"width":"100%","height":"800px","idselection":{"enabled":false},"byselection":{"enabled":false},"main":{"text":"SEM graph","style":"font-family:Georgia, Times New Roman, Times, serif;font-weight:bold;font-size:20px;text-align:center;"},"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","igraphlayout":{"type":"square"},"legend":{"width":0.15,"useGroups":false,"position":"left","ncol":1,"stepX":100,"stepY":100,"zoom":true,"nodes":{"label":["Context","Early life","Baseline","FU1","FU2"],"shape":["square","square","dot","dot","dot"],"color.background":["#afa8b3","#4F3824","#D1603D","#DDB967","#D0E37F"],"color.border":["#afa8b3","#4F3824","#D1603D","#DDB967","#D0E37F"]},"nodesToDataframe":true}},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
 <strong>Fig.5</strong> The DAG was estimated using the structural EM algorithm applying the Hill-Climbing score-based algorithm in the maximization step.
 </p>
@@ -1857,12 +1861,12 @@ sem &lt;- structural.em(data.with.missing.values,
 <div style="margin-bottom:50px;">
 
 </div>
-<div id="wwfaqyouyw" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="ihjgeuulpc" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#wwfaqyouyw .gt_table {
+#ihjgeuulpc .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1887,7 +1891,7 @@ sem &lt;- structural.em(data.with.missing.values,
   border-left-color: #D3D3D3;
 }
 
-#wwfaqyouyw .gt_heading {
+#ihjgeuulpc .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1899,7 +1903,7 @@ sem &lt;- structural.em(data.with.missing.values,
   border-right-color: #D3D3D3;
 }
 
-#wwfaqyouyw .gt_title {
+#ihjgeuulpc .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1909,7 +1913,7 @@ sem &lt;- structural.em(data.with.missing.values,
   border-bottom-width: 0;
 }
 
-#wwfaqyouyw .gt_subtitle {
+#ihjgeuulpc .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1919,13 +1923,13 @@ sem &lt;- structural.em(data.with.missing.values,
   border-top-width: 0;
 }
 
-#wwfaqyouyw .gt_bottom_border {
+#ihjgeuulpc .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#wwfaqyouyw .gt_col_headings {
+#ihjgeuulpc .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1940,7 +1944,7 @@ sem &lt;- structural.em(data.with.missing.values,
   border-right-color: #D3D3D3;
 }
 
-#wwfaqyouyw .gt_col_heading {
+#ihjgeuulpc .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1960,7 +1964,7 @@ sem &lt;- structural.em(data.with.missing.values,
   overflow-x: hidden;
 }
 
-#wwfaqyouyw .gt_column_spanner_outer {
+#ihjgeuulpc .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1972,15 +1976,15 @@ sem &lt;- structural.em(data.with.missing.values,
   padding-right: 4px;
 }
 
-#wwfaqyouyw .gt_column_spanner_outer:first-child {
+#ihjgeuulpc .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#wwfaqyouyw .gt_column_spanner_outer:last-child {
+#ihjgeuulpc .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#wwfaqyouyw .gt_column_spanner {
+#ihjgeuulpc .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1992,7 +1996,7 @@ sem &lt;- structural.em(data.with.missing.values,
   width: 100%;
 }
 
-#wwfaqyouyw .gt_group_heading {
+#ihjgeuulpc .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2014,7 +2018,7 @@ sem &lt;- structural.em(data.with.missing.values,
   vertical-align: middle;
 }
 
-#wwfaqyouyw .gt_empty_group_heading {
+#ihjgeuulpc .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2029,15 +2033,15 @@ sem &lt;- structural.em(data.with.missing.values,
   vertical-align: middle;
 }
 
-#wwfaqyouyw .gt_from_md > :first-child {
+#ihjgeuulpc .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#wwfaqyouyw .gt_from_md > :last-child {
+#ihjgeuulpc .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#wwfaqyouyw .gt_row {
+#ihjgeuulpc .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2056,7 +2060,7 @@ sem &lt;- structural.em(data.with.missing.values,
   overflow-x: hidden;
 }
 
-#wwfaqyouyw .gt_stub {
+#ihjgeuulpc .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2068,7 +2072,7 @@ sem &lt;- structural.em(data.with.missing.values,
   padding-left: 12px;
 }
 
-#wwfaqyouyw .gt_summary_row {
+#ihjgeuulpc .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2078,7 +2082,7 @@ sem &lt;- structural.em(data.with.missing.values,
   padding-right: 5px;
 }
 
-#wwfaqyouyw .gt_first_summary_row {
+#ihjgeuulpc .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2088,7 +2092,7 @@ sem &lt;- structural.em(data.with.missing.values,
   border-top-color: #D3D3D3;
 }
 
-#wwfaqyouyw .gt_grand_summary_row {
+#ihjgeuulpc .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2098,7 +2102,7 @@ sem &lt;- structural.em(data.with.missing.values,
   padding-right: 5px;
 }
 
-#wwfaqyouyw .gt_first_grand_summary_row {
+#ihjgeuulpc .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2108,11 +2112,11 @@ sem &lt;- structural.em(data.with.missing.values,
   border-top-color: #D3D3D3;
 }
 
-#wwfaqyouyw .gt_striped {
+#ihjgeuulpc .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#wwfaqyouyw .gt_table_body {
+#ihjgeuulpc .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2121,7 +2125,7 @@ sem &lt;- structural.em(data.with.missing.values,
   border-bottom-color: #D3D3D3;
 }
 
-#wwfaqyouyw .gt_footnotes {
+#ihjgeuulpc .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2135,13 +2139,13 @@ sem &lt;- structural.em(data.with.missing.values,
   border-right-color: #D3D3D3;
 }
 
-#wwfaqyouyw .gt_footnote {
+#ihjgeuulpc .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#wwfaqyouyw .gt_sourcenotes {
+#ihjgeuulpc .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2155,41 +2159,41 @@ sem &lt;- structural.em(data.with.missing.values,
   border-right-color: #D3D3D3;
 }
 
-#wwfaqyouyw .gt_sourcenote {
+#ihjgeuulpc .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#wwfaqyouyw .gt_left {
+#ihjgeuulpc .gt_left {
   text-align: left;
 }
 
-#wwfaqyouyw .gt_center {
+#ihjgeuulpc .gt_center {
   text-align: center;
 }
 
-#wwfaqyouyw .gt_right {
+#ihjgeuulpc .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#wwfaqyouyw .gt_font_normal {
+#ihjgeuulpc .gt_font_normal {
   font-weight: normal;
 }
 
-#wwfaqyouyw .gt_font_bold {
+#ihjgeuulpc .gt_font_bold {
   font-weight: bold;
 }
 
-#wwfaqyouyw .gt_font_italic {
+#ihjgeuulpc .gt_font_italic {
   font-style: italic;
 }
 
-#wwfaqyouyw .gt_super {
+#ihjgeuulpc .gt_super {
   font-size: 65%;
 }
 
-#wwfaqyouyw .gt_footnote_marks {
+#ihjgeuulpc .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
