@@ -7,6 +7,8 @@ This repository contains the `R` analysis code for the paper "A longitudinal cau
 
 The code is published under the GPL-3 license. 
 
+Click here to visit the page: <https://bips-hb.github.io/ccg-childhood-obesity/>
+
 ### Acknowledgements
 
 We gratefully acknowledge financial support by the German Research Foundation (DFG, DI 2372/1-1), the Federal Ministry of Education and Research (BMBF; grant number 01EA2102A) and the European Union’s Horizon 2020 research and innovation programme (ERA-NET Cofund action N° 727565). The IDEFICS study was financially supported by the European Commission within the Sixth RTD Framework Programme Contract No. 016181 (FOOD); the I.Family study was funded by the European Commission within the Seventh RTD Framework Programme Contract No. 266044 (KBBE 2010-14).
