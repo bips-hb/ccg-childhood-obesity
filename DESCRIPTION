@@ -1,0 +1,17 @@
+Package: ccg-childhood-obesity
+Type: Package
+Title: Cohort Causal Graph Discovery from data of the IDEFICS/I.Family study
+Version: 1.0
+Author: R. Foraita and J. Witte
+Maintainer: R. Foraita <foraita@leibniz-bips.de>
+Description: Analysis pipeline
+License: Private Package
+Encoding: UTF-8
+LazyData: true
+Suggests: 
+    knitr,
+    rmarkdown, RMySQL, PResiduals, nnet, bnlearn, gtools
+Depends: tidyverse, devtools, mice, micd, pcalg, igraph, tpc
+Imports: MASS
+VignetteBuilder: knitr
+RoxygenNote: 7.1.1
