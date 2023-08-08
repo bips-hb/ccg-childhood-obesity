@@ -10,6 +10,7 @@ This repository contains the `R` analysis code for the paper "A longitudinal cau
 * `tpc`, see www.github.com/bips-hb/tpc and **CRAN**.  
 
 The code is published under the GPL-3 license. 
+To replicate the study, follow the files in the folder _'analysis'_.
 
 ### Funding
 
@@ -28,4 +29,3 @@ https://www.medrxiv.org/content/10.1101/2022.05.18.22275036v2
 Ronja Foraita\
 Leibniz Institute for Prevention Research & Epidemiology  
 E-mail: foraita (at) leibniz-bips.de
-
