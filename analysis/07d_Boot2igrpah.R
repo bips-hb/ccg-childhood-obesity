@@ -8,8 +8,8 @@
 # Purpose: Bootstrap zu einem Graphen basteln
 #
 # ------------------------------------------------------------------------------
-boot <- readRDS("data/boot100_mi1-graph.RDS")
-load("data/graph-10trees.RData")
+boot <- readRDS("data_not_load/boot100_mi1-graph.RDS")
+load("data_not_load/06_graph-10trees-pa.RData")
 
 
 # g.pa to igraph
@@ -60,9 +60,21 @@ V(g.boot)$name <- c("Sex", "Country", "Migrant", "Income", "ISCED", "Age_at_birt
 edges <- as.data.frame(as_edgelist(g.boot))
 names(edges) <- c("from", "to")
 edges$weight <- E(g.boot)$weight
+# merge two data frames
+edges.joint <- left_join(edges.pa, edges, by = c("from", "to"))
+
+
+
+
+# edges with more than 90%
+e90 <- edges[which(edges$weight >= 90),]
+e90[order(e90$weight, decreasing = TRUE),]
+
+
 
 # ---! SAVE   -------------------------------------------------------
-save(g.boot, edges, file = "data/boot100igraph.RData")
+save(g.boot, edges, file = "data_not_load/07_boot100igraph.RData")
+# -------------------------------------------------------------------
 
 
 

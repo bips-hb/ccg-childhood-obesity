@@ -8,15 +8,19 @@
 # Purpose: Data imputation
 #
 # ------------------------------------------------------------------------------
-
-analysis_data <- readRDS("data/data2impute.rds")
-
+# --- was bisher geschah: ------------------------------------------------------
+# source("data/01_DataPreparation.R")
+# source("data/02_CreateAnalysisData.R)
+analysis_data <- readRDS("data_not_load/02_data2impute.RDS")
+# ------------------------------------------------------------------------------
 
 # ---------------------   Missing Value Imputation   ---------------------------
 # 1) Patterns & dump variables (such as constants, id_no, etc.)
 outlist1 <- c("id_no", "ifam_no", "family_id")
+#pattern <- md.pattern(analysis_data)
+#saveRDS(pattern, "data/missingness-pattern.RDS")
 ini <- mice(dplyr::select(analysis_data, -all_of(outlist1)), meth = 'rf', maxit = 0)
-table(ini$nmis)
+#table(ini$nmis)
 names(ini$nmis[ini$nmis == 0])
 names(ini$nmis[ini$nmis > nrow(analysis_data)/2])
 
@@ -39,21 +43,34 @@ outlist <- sort(c(outlist1, outlist2, fxout, fxout2, "drink_9_t3.1"))
 tmp <- analysis_data[, !names(analysis_data) %in% outlist3]
 
 fx3 <- flux(tmp)
-# plot(fx3$outflux, fx3$influx)
+plot(fx3$outflux, fx3$influx)
 
-# 4) Imputation (1 ca. 10 min, 50 ca. 30 sec)
+
+
+# 4) Remove variables & quickpred
+# quickpred is not used for graphical model imputation
+# new.data <- tmp[, !names(tmp) %in% outlist3]
+saveRDS(outlist, file = "data_not_load/outlist.RDS")
+
+
+# 2) Check methods for imputation
+#make.method(new.data)
+
+
+
+# 6) Imputation (1 ca. 10 min, 50 ca. 30 sec)
 #system.time(
 imp <- mice(new.data, m = 10, meth = 'rf', seed = 16873, print = TRUE)
 #)
 
+# --- SAVE! --------------------------------------------------------------------
+saveRDS(imp, "data/03_MI-10.RDS")
+saveRDS(new.data, "data_not_load/03_MI-input.RDS")
+# ------------------------------------------------------------------------------
+
 # 7) Check logged events
 as.character(imp$loggedEvents[, "out"])
 
-
-# --- SAVE! --------------------------------------------------------------------
-saveRDS(imp, "data/MI-10.rds")
-saveRDS(new.data, "data_not_load/MI-input.rds")
-# ------------------------------------------------------------------------------
 
 
 
